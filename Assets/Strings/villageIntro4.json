@@ -1,0 +1,44 @@
+[
+	{
+		"name": "Omyx",
+		"text": "come on, come on! write my name already! i wanna join!",
+		"image": "res://Assets/Sprites/DialogueTalking/omyxstars.png",
+		"sound": "res://Assets/Sound/SndOriginal/omyx voice.mp3",
+		"image_side": "0"
+	},
+	{
+		"name": "The mayor",
+		"text": "calm down omyx... I can't write your name, you don't have a sword.",
+		"image": "res://Assets/Sprites/DialogueTalking/the mayor nervous.png",
+		"sound": "res://Assets/Sound/SndOriginal/Blip47.wav",
+		"image_side": "1"
+	},
+	{
+		"name": "Yamex",
+		"text": "told you so.",
+		"image": "res://Assets/Sprites/DialogueTalking/yamex-_-.png",
+		"sound": "res://Assets/Sound/SndOriginal/yamex voice.mp3",
+		"image_side": "0"
+	},
+	{
+		"name": "Omyx",
+		"text": "shut up...",
+		"image": "res://Assets/Sprites/DialogueTalking/omyx-_-.png",
+		"sound": "res://Assets/Sound/SndOriginal/omyx voice.mp3",
+		"image_side": "0"
+	},
+	{
+		"name": "The mayor",
+		"text": "if you want to join, get some battle gear and meet me at the dojo.",
+		"image": "res://Assets/Sprites/DialogueTalking/the mayor normal.png",
+		"sound": "res://Assets/Sound/SndOriginal/Blip47.wav",
+		"image_side": "1"
+	},
+	{
+		"name": "Omyx",
+		"text": "hmph. fine...",
+		"image": "res://Assets/Sprites/DialogueTalking/omyxsad.png",
+		"sound": "res://Assets/Sound/SndOriginal/omyx voice.mp3",
+		"image_side": "0"
+	}
+]

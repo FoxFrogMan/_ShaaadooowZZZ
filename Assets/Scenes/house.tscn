@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://cklceppoc5wn3"]
+
+[ext_resource type="Texture2D" uid="uid://b68yyp74nwsvs" path="res://Assets/Sprites/Village stuff/Fronthouse.png" id="1_rndms"]
+
+[node name="house" type="StaticBody2D"]
+y_sort_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -64)
+texture = ExtResource("1_rndms")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]

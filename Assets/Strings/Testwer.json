@@ -1,0 +1,27 @@
+[
+	{
+		"name": "Hicham",
+		"text": "Hello there.\nDo you want to play with me?",
+		"options": ["Yes", "No", "Maybe"],
+		"option_dialogues": [
+		[
+			{
+			"name": "Hicham",
+			"text": "Thanks man"
+			},
+		],
+		[
+			{
+			"name": "Hicham",
+			"text": "Why"
+			},
+		],
+		[
+			{
+			"name": "Hicham",
+			"text": "How ?"
+			},
+		]
+		]
+	},
+]

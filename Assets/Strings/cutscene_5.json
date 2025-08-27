@@ -1,0 +1,20 @@
+[
+	{
+		"name": "Yamex",
+		"text": "What's all this noise since morning?",
+		"image": "res://Assets/Sprites/DialogueTalking/yamexcurious.png",
+		"sound": "res://Assets/Sound/SndOriginal/yamex voice.mp3",
+		"image_side": "1",
+		"speed": 0.03,
+		"no_skip": false
+	},
+	{
+		"name": "Omyx",
+		"text": " Wait..announcement? today ? could it be!?",
+		"image": "res://Assets/Sprites/DialogueTalking/omyxstars.png",
+		"sound": "res://Assets/Sound/SndOriginal/omyx voice.mp3",
+		"image_side": "0",
+		"speed": 0.03,
+		"no_skip": false
+	},
+]

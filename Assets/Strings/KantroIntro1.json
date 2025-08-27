@@ -1,0 +1,14 @@
+[
+	{
+		"name": "Kantro",
+		"image": "res://Assets/Sprites/DialogueTalking/kantrohappy.png",
+		"text":"so... I'm finally here",
+		"sound": "res://Assets/Sound/snd_txtrud_ch1.wav"
+	},
+	{
+		"name": "Kantro",
+		"image": "res://Assets/Sprites/DialogueTalking/kantrohappy.png",
+		"text":"the [yellow: king's castle]",
+		"sound": "res://Assets/Sound/snd_txtrud_ch1.wav"
+	},
+]

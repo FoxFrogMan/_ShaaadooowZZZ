@@ -1,0 +1,28 @@
+[
+	{
+		"name": "Yamex",
+		"text": "hey, what's with all the noise?",
+		"image": "res://Assets/Sprites/DialogueTalking/yamexcurious.png",
+		"sound" : "res://Assets/Sound/SndOriginal/yamex voice.mp3",
+		"image_side": "0",
+	},
+	{
+		"name": "villager",
+		"text": "oh! you two are back early from the field?",
+		"sound": "res://Assets/Sound/SndOriginal/Blip47.wav",
+		"image_side": "1",
+	},
+	{
+		"name": "villager",
+		"text": "perfect timing, the mayor is announcing this year's sword festival",
+		"sound": "res://Assets/Sound/SndOriginal/Blip47.wav",
+		"image_side": "1",
+	},
+	{
+		"name": "Omyx",
+		"text": "wait, for real?! I totally forgot it was today",
+		"image": "res://Assets/Sprites/DialogueTalking/omyxstars.png",
+		"sound": "res://Assets/Sound/SndOriginal/omyx voice.mp3",
+		"image_side": "0",
+	}
+]

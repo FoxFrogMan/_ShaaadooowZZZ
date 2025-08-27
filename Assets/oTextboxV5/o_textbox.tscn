@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://c6kbji6tg1y44"]
+
+[ext_resource type="Script" uid="uid://ko1fikv4qvrw" path="res://Assets/Scripts/connetc_json.gd" id="1_gri8b"]
+[ext_resource type="Script" uid="uid://cqxflt3dhngrl" path="res://Assets/Scripts/o_text_systemVfinaly.gd" id="2_gri8b"]
+
+[node name="oTextbox" type="CanvasLayer"]
+script = ExtResource("1_gri8b")
+
+[node name="oTextSystem" type="Node2D" parent="."]
+texture_filter = 1
+position = Vector2(36, 524)
+scale = Vector2(1.38, 1.38)
+script = ExtResource("2_gri8b")
+font_size = 24
+padding = 20
+rect_width = 725
+rect_height = 179
+line_spacing = 5
+skip_key = "skip"
+next_key = "confirm"
+option_spacing = 100
+option_fixed_y = 150

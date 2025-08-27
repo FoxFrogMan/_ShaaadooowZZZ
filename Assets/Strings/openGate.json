@@ -1,0 +1,14 @@
+[
+	{
+		"name": "guard",
+		"text": "oh! Kantro the Tornado! It's truly an honor to meet you.",
+		"image": "",
+		"sound": "res://Assets/Sound/snd_txtber_ch1.wav"
+	},
+	{
+		"name": "guard",
+		"text": "His majesty is waiting for your arrival atop his throne, let us open the gate for you.",
+		"image": "",
+		"sound": "res://Assets/Sound/snd_txtber_ch1.wav"
+	},
+]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d38vnxj0nhcl4"
+path="res://.godot/imported/open gate sound.mp3-5217925a2916c1a8e6df0e109f5e1928.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sound/open gate sound.mp3"
+dest_files=["res://.godot/imported/open gate sound.mp3-5217925a2916c1a8e6df0e109f5e1928.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

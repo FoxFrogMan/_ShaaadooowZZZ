@@ -1,0 +1,415 @@
+[gd_scene load_steps=26 format=3 uid="uid://dwwnf22k1dd35"]
+
+[ext_resource type="Texture2D" uid="uid://bjug2g4i6bqau" path="res://Assets/Sprites/Village stuff/the village.png" id="1_io1xo"]
+[ext_resource type="Texture2D" uid="uid://xm8wso8485xa" path="res://Assets/Sprites/Characters/Omyx .png" id="2_pqpl4"]
+[ext_resource type="Texture2D" uid="uid://umxow3nbxgow" path="res://Assets/Sprites/Characters/Yamex.png" id="3_r1fuw"]
+[ext_resource type="Script" uid="uid://ctndspg2iwu4c" path="res://Assets/Scripts/find_a_sword_&_shield1.cutcsene.gd" id="4_sx0xe"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cyba2"]
+atlas = ExtResource("2_pqpl4")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kwnhs"]
+atlas = ExtResource("2_pqpl4")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2t3n7"]
+atlas = ExtResource("2_pqpl4")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7iwsa"]
+atlas = ExtResource("2_pqpl4")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m383n"]
+atlas = ExtResource("2_pqpl4")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rx7fr"]
+atlas = ExtResource("2_pqpl4")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yfusl"]
+atlas = ExtResource("2_pqpl4")
+region = Rect2(128, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q11f6"]
+atlas = ExtResource("2_pqpl4")
+region = Rect2(192, 64, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8xfq4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cyba2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kwnhs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2t3n7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7iwsa")
+}],
+"loop": true,
+"name": &"Omyx_walk_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m383n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rx7fr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yfusl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q11f6")
+}],
+"loop": true,
+"name": &"Omyx_walk_right",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qdscs"]
+atlas = ExtResource("3_r1fuw")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v16dx"]
+atlas = ExtResource("3_r1fuw")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j6t4x"]
+atlas = ExtResource("3_r1fuw")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ndy5"]
+atlas = ExtResource("3_r1fuw")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_waw0f"]
+atlas = ExtResource("3_r1fuw")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s3nap"]
+atlas = ExtResource("3_r1fuw")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6qfg0"]
+atlas = ExtResource("3_r1fuw")
+region = Rect2(128, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kpu5k"]
+atlas = ExtResource("3_r1fuw")
+region = Rect2(192, 64, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xcmrh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qdscs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v16dx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j6t4x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ndy5")
+}],
+"loop": true,
+"name": &"Yamex_walk_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_waw0f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s3nap")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6qfg0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kpu5k")
+}],
+"loop": true,
+"name": &"Yamex_walk_right",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_goyyj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Yamex&Omyx/black_screen_start:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Yamex&Omyx/Omyx:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Omyx_walk_down"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Yamex&Omyx/Omyx:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Yamex&Omyx/black_screen_finish:color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Yamex&Omyx/Yamex:animation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Yamex_walk_down"]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Yamex&Omyx/Yamex:frame")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Yamex&Omyx/Omyx:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(126, -242)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Yamex&Omyx/Yamex:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(153, -241)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Yamex&Omyx/main_camera:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(140, -239)]
+}
+
+[sub_resource type="Animation" id="Animation_lrj0j"]
+resource_name = "find_a_sword_and_sield_cutscene"
+length = 25.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Yamex&Omyx/black_screen_start:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Yamex&Omyx/Omyx:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Omyx_walk_down"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Yamex&Omyx/Omyx:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1, 1.42, 1.84667, 2.26667, 2.68, 3.1, 3.52, 3.93961, 4.36628, 4.78628, 5.19961, 5.61961, 6.03961, 6.43961, 6.86628, 7.28628, 7.69961, 8.11961, 8.53961, 8.94961, 9.37628, 9.79628, 10.2096, 10.6296, 11.0496, 11.4688, 11.8955, 12.3155, 12.7288, 13.1488, 13.5688, 13.9688, 14.3955, 14.8155, 15.2288, 15.6488, 16.0688, 16.4708, 16.8974, 17.3174, 17.7308, 18.1508, 18.5708, 18.9849, 19.4116, 19.8316, 20.2449, 20.6649, 21.0849, 21.5049, 21.9316, 22.3516, 22.7649, 23.1849, 23.6049),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 2, 1, 0, 1, 2, 3, 2, 1, 0, 1, 2, 3, 2, 1, 0, 1, 2, 3, 2, 1, 0, 1, 2, 3, 2, 1, 0, 1, 2, 3, 2, 1, 0, 1, 2, 3, 2, 1, 0, 1, 2, 3, 2, 1, 0, 1, 2, 3, 2, 1, 0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Yamex&Omyx/black_screen_finish:color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(24, 25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Yamex&Omyx/Yamex:animation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Yamex_walk_down"]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Yamex&Omyx/Yamex:frame")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(1.03333, 1.45333, 1.88, 2.3, 2.71333, 3.13333, 3.55333, 3.97294, 4.39961, 4.81961, 5.23294, 5.65294, 6.07294, 6.47294, 6.89961, 7.31961, 7.73294, 8.15294, 8.57294, 8.98294, 9.40961, 9.82961, 10.2429, 10.6629, 11.0829, 11.5022, 11.9288, 12.3488, 12.7622, 13.1822, 13.6022, 14.0022, 14.4288, 14.8488, 15.2622, 15.6822, 16.1022, 16.5041, 16.9308, 17.3508, 17.7641, 18.1841, 18.6041, 19.0183, 19.4449, 19.8649, 20.2783, 20.6983, 21.1183, 21.5383, 21.9649, 22.3849, 22.7983, 23.2183, 23.6383),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 2, 1, 0, 1, 2, 3, 2, 1, 0, 1, 2, 3, 2, 1, 0, 1, 2, 3, 2, 1, 0, 1, 2, 3, 2, 1, 0, 1, 2, 3, 2, 1, 0, 1, 2, 3, 2, 1, 0, 1, 2, 3, 2, 1, 0, 1, 2, 3, 2, 1, 0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Yamex&Omyx/Omyx:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(1, 25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(126, -242), Vector2(126, 440)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Yamex&Omyx/Yamex:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(1, 25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(153, -241), Vector2(153, 441)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Yamex&Omyx/main_camera:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(1, 25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(140, -239), Vector2(140, 443)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7djhk"]
+_data = {
+&"RESET": SubResource("Animation_goyyj"),
+&"find_a_sword_and_sield_cutscene": SubResource("Animation_lrj0j")
+}
+
+[node name="fing _a_sword_and_shield_cutcsene" type="Node2D"]
+
+[node name="TheVillage" type="Sprite2D" parent="."]
+position = Vector2(433, 257)
+texture = ExtResource("1_io1xo")
+
+[node name="Yamex&Omyx" type="Node" parent="."]
+
+[node name="Omyx" type="AnimatedSprite2D" parent="Yamex&Omyx"]
+position = Vector2(126, -242)
+sprite_frames = SubResource("SpriteFrames_8xfq4")
+animation = &"Omyx_walk_down"
+
+[node name="Yamex" type="AnimatedSprite2D" parent="Yamex&Omyx"]
+position = Vector2(153, -241)
+sprite_frames = SubResource("SpriteFrames_xcmrh")
+animation = &"Yamex_walk_down"
+
+[node name="main_camera" type="Camera2D" parent="Yamex&Omyx"]
+position = Vector2(140, -239)
+zoom = Vector2(5, 5)
+
+[node name="black_screen_start" type="ColorRect" parent="Yamex&Omyx"]
+offset_left = 33.0
+offset_top = -319.0
+offset_right = 247.0
+offset_bottom = -159.0
+color = Color(0, 0, 0, 1)
+
+[node name="black_screen_finish" type="ColorRect" parent="Yamex&Omyx"]
+offset_left = 29.0
+offset_top = 323.0
+offset_right = 247.0
+offset_bottom = 527.0
+color = Color(0, 0, 0, 1)
+
+[node name="main_animation_player" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_7djhk")
+}
+script = ExtResource("4_sx0xe")

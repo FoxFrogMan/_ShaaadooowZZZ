@@ -1,0 +1,79 @@
+[gd_resource type="SpriteFrames" load_steps=11 format=3 uid="uid://dbhdujw0ccdxa"]
+
+[ext_resource type="Texture2D" uid="uid://deqgxx8dan44l" path="res://Assets/Sprites/Village stuff/red bird.png" id="1_ac610"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nmvbu"]
+atlas = ExtResource("1_ac610")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kned0"]
+atlas = ExtResource("1_ac610")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3xhnr"]
+atlas = ExtResource("1_ac610")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m0r2r"]
+atlas = ExtResource("1_ac610")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jo6bg"]
+atlas = ExtResource("1_ac610")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5c3uo"]
+atlas = ExtResource("1_ac610")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xi2a7"]
+atlas = ExtResource("1_ac610")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cud2c"]
+atlas = ExtResource("1_ac610")
+region = Rect2(16, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nyxay"]
+atlas = ExtResource("1_ac610")
+region = Rect2(32, 32, 16, 16)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nmvbu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kned0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3xhnr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m0r2r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jo6bg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5c3uo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xi2a7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cud2c")
+}],
+"loop": true,
+"name": &"fly",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nyxay")
+}],
+"loop": false,
+"name": &"idle",
+"speed": 1.0
+}]

@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://x7aefogr7p5h"]
+
+[ext_resource type="Script" uid="uid://k3qagnix5dl3" path="res://Assets/Scripts/camera_2d.gd" id="1_mbhka"]
+
+[node name="Camera" type="Camera2D"]
+anchor_mode = 0
+zoom = Vector2(4, 4)
+process_callback = 0
+script = ExtResource("1_mbhka")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

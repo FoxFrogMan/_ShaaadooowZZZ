@@ -1,0 +1,44 @@
+[
+	{
+		"name":"Yamex",
+		"image":"res://Assets/Sprites/DialogueTalking/yamex-_-.png",
+		"sound":"res://Assets/Sound/snd_txtrud_ch1.wav",
+		"text":"Well, that didn't go as planned, we need to get some combat gear for you as soon as possible.",
+		"no_skip":true,
+	},
+	{
+		"name":"Omyx",
+		"image":"res://Assets/Sprites/DialogueTalking/omyxthinks.png",
+		"sound":"res://Assets/Sound/snd_txtrud_ch1.wav",
+		"text":"That's right, the tournament is tomorrow! But what about you? Don't you want to join too?",
+		"no_skip":true,
+	},
+	{
+		"name":"Yamex",
+		"image":"res://Assets/Sprites/DialogueTalking/yamexcurious.png",
+		"sound":"res://Assets/Sound/snd_txtrud_ch1.wav",
+		"text":"Nuh .. not really",
+		"no_skip":true,
+	},
+	{
+		"name":"Omyx",
+		"image":"res://Assets/Sprites/DialogueTalking/omyxsad.png",
+		"sound":"res://Assets/Sound/snd_txtrud_ch1.wav",
+		"text":"Come on move it around a bit bro, we might even meet in the finals",
+		"no_skip":true,
+	},
+	{
+		"name":"Yamex",
+		"image":"res://Assets/Sprites/DialogueTalking/yamex-_-.png",
+		"sound":"res://Assets/Sound/snd_txtrud_ch1.wav",
+		"text":"I don't know, I'll think about it ..",
+		"no_skip":true,
+	},
+	{
+		"name":"Yamex",
+		"image":"res://Assets/Sprites/DialogueTalking/yamexhappy.png",
+		"sound":"res://Assets/Sound/snd_txtrud_ch1.wav",
+		"text":"but let's focus on finding combat equipment for the tournament for now",
+		"no_skip":true,
+	}
+]

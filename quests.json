@@ -1,0 +1,14 @@
+{
+	"0":{
+		"name": "Find a sword and shield",
+		"type": 0,
+		"desc": "In order to join the tournament, you need to have a weapon to fight with.",
+		"rewards": {"money":0,"xp":0}
+		},
+	"1":{
+		"name": "Help around the village",
+		"type": 1,
+		"desc": "look around the village and talk to people, they might need a favor!",
+		"rewards": {"money":0,"xp":10}
+		},
+}

@@ -1,0 +1,65 @@
+[gd_scene load_steps=10 format=3 uid="uid://ck1emnyb2yt8x"]
+
+[ext_resource type="Script" uid="uid://73wrgsg1xy5b" path="res://Assets/Scripts/o_following.gd" id="1_5x1fl"]
+[ext_resource type="Script" uid="uid://bp88l1cr6pmet" path="res://Assets/Scripts/ysort.gd" id="1_6q4i8"]
+[ext_resource type="PackedScene" uid="uid://03mgpexvipmk" path="res://Assets/Scenes/omyx.tscn" id="2_6q4i8"]
+[ext_resource type="PackedScene" uid="uid://bkgiu8550khv3" path="res://Assets/Scenes/yamex.tscn" id="3_4jby5"]
+[ext_resource type="PackedScene" uid="uid://x7aefogr7p5h" path="res://Assets/Scenes/cameraV2.tscn" id="4_fcgn7"]
+[ext_resource type="Script" uid="uid://dx2ord2j06kvr" path="res://Assets/Scripts/area_2d.gd" id="6_4jby5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5x1fl"]
+size = Vector2(7, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6q4i8"]
+size = Vector2(8, 19.5258)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fcgn7"]
+size = Vector2(217, 20)
+
+[node name="room_debug" type="Node2D"]
+texture_filter = 1
+
+[node name="Ysort" type="Node2D" parent="."]
+script = ExtResource("1_6q4i8")
+
+[node name="oFollowing" type="Node2D" parent="."]
+script = ExtResource("1_5x1fl")
+
+[node name="Camera" parent="." instance=ExtResource("4_fcgn7")]
+
+[node name="Omyx" type="CharacterBody2D" parent="."]
+unique_name_in_owner = true
+z_index = 41
+position = Vector2(134, 41)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Omyx"]
+position = Vector2(0.498978, 10.3864)
+shape = SubResource("RectangleShape2D_5x1fl")
+
+[node name="Sprite" parent="Omyx" instance=ExtResource("2_6q4i8")]
+animation = &"down"
+
+[node name="Yamex" type="CharacterBody2D" parent="."]
+unique_name_in_owner = true
+z_index = 70
+position = Vector2(95, 70)
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Yamex"]
+position = Vector2(0.480606, 10.3352)
+shape = SubResource("RectangleShape2D_6q4i8")
+
+[node name="Sprite" parent="Yamex" instance=ExtResource("3_4jby5")]
+animation = &"down"
+
+[node name="Area2D" type="Area2D" parent="."]
+z_index = 145
+position = Vector2(2, 145)
+script = ExtResource("6_4jby5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(98.5, 0)
+shape = SubResource("RectangleShape2D_fcgn7")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

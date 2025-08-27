@@ -1,0 +1,43 @@
+[
+	{
+		"name": "Omyx",
+		"text": "You know what, Yamex . . .",
+		"image": "res://Assets/Sprites/DialogueTalking/omyxhappy.png",
+		"sound" : "res://Assets/Sound/SndOriginal/omyx voice.mp3",
+		"image_side": "0",
+		"speed": 0.02,
+		"no_skip": false
+	},
+	{
+		"name": "Omyx",
+		"text": "I don't think I will ever get bored of seeing the sunrise in my life",
+		"image": "res://Assets/Sprites/DialogueTalking/omyxsad.png",
+		"sound" : "res://Assets/Sound/SndOriginal/omyx voice.mp3",
+		"image_side": "0",
+		"speed": 0.02,
+	},
+	{
+		"name": "Yamex",
+		"text": "You're right, it really is quite amazing",
+		"image": "res://Assets/Sprites/DialogueTalking/yamexhappy.png",
+		"sound" : "res://Assets/Sound/SndOriginal/yamex voice.mp3",
+		"image_side": "1",
+		"speed": 0.02,
+	},
+	{
+		"name": "Omyx",
+		"text": "exactly, since we came here, every time I see the sunrise it looks more beautiful than the last",
+		"image": "res://Assets/Sprites/DialogueTalking/omyxhappy.png",
+		"sound" : "res://Assets/Sound/SndOriginal/omyx voice.mp3",
+		"image_side": "0",
+		"speed": 0.02,
+	},
+	{
+		"name": "Yamex",
+		"text": "yeah . . . Really",
+		"image": "res://Assets/Sprites/DialogueTalking/yamexnormal.png",
+		"sound" : "res://Assets/Sound/SndOriginal/yamex voice.mp3",
+		"image_side": "1",
+		"speed": 0.02,
+	},
+]

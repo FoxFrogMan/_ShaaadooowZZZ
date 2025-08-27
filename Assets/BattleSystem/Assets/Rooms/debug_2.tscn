@@ -1,0 +1,1344 @@
+[gd_scene load_steps=64 format=3 uid="uid://d10hot54o4caq"]
+
+[ext_resource type="Script" uid="uid://5fsq6wujam2v" path="res://Assets/Scripts/select_menu.gd" id="1_7yupy"]
+[ext_resource type="Texture2D" uid="uid://dkthd4ef3a8k0" path="res://Assets/BattleSystem/Assets/testing/back.png" id="1_j5sam"]
+[ext_resource type="Script" uid="uid://ci8eu18aa4lqu" path="res://Assets/Scripts/GhostEffect.gd" id="2_416k2"]
+[ext_resource type="Texture2D" uid="uid://dlv3fbthau7rk" path="res://Assets/BattleSystem/Assets/testing/Nafora1.png" id="2_a151n"]
+[ext_resource type="Texture2D" uid="uid://c0v2s3rvxgmcy" path="res://Assets/Sprites/TextBox/s_BattleMenu.png" id="2_b8nrj"]
+[ext_resource type="Texture2D" uid="uid://bsc1npvg346g3" path="res://Assets/BattleSystem/Assets/testing/Nafora2.png" id="3_ku1ys"]
+[ext_resource type="FontFile" uid="uid://cobmtyuq1wo3h" path="res://Assets/font/8bit.png" id="3_o8pio"]
+[ext_resource type="Texture2D" uid="uid://rod63a76kqnx" path="res://Assets/BattleSystem/Assets/testing/Nafora3.png" id="4_lgmkf"]
+[ext_resource type="Texture2D" uid="uid://cu0agks12bcta" path="res://Assets/Sprites/Battle/sword icon.png" id="4_o8pio"]
+[ext_resource type="Texture2D" uid="uid://ys6awjrhvvfy" path="res://Assets/Sprites/Battle/skills icon.png" id="5_kpxt7"]
+[ext_resource type="Texture2D" uid="uid://bwuti7esdwbsm" path="res://Assets/BattleSystem/Assets/testing/Nafora4.png" id="5_lrtp6"]
+[ext_resource type="Texture2D" uid="uid://bq85lrsaee4jy" path="res://Assets/Sprites/Battle/Braclet icon.png" id="6_416k2"]
+[ext_resource type="Texture2D" uid="uid://6c26sg1hcfef" path="res://Assets/Sprites/Battle/shield icon.png" id="7_gr8fj"]
+[ext_resource type="Texture2D" uid="uid://bwyxvose71vrk" path="res://Assets/Sprites/Battle/items icon.png" id="8_j5sam"]
+[ext_resource type="Texture2D" uid="uid://c5k40c4557xhx" path="res://Assets/Sprites/Battle/run icon.png" id="9_nvim0"]
+[ext_resource type="Script" uid="uid://2enf0k3nnf5t" path="res://Assets/Scripts/info.gd" id="10_42h8c"]
+[ext_resource type="Texture2D" uid="uid://dr07vh7mdsqoh" path="res://Assets/Sprites/Battle/omyx 2.5.png" id="10_86rny"]
+[ext_resource type="FontFile" uid="uid://b7sy7x0nnuw3m" path="res://Assets/font/PressStart2P-Regular.ttf" id="11_a151n"]
+[ext_resource type="Texture2D" uid="uid://42hvu78xq5ug" path="res://Assets/Sprites/Battle/yamex 2.5.png" id="11_etwmt"]
+[ext_resource type="PackedScene" uid="uid://x7aefogr7p5h" path="res://Assets/Scenes/cameraV2.tscn" id="12_ku1ys"]
+[ext_resource type="Script" uid="uid://dpdt34hlf2utf" path="res://Assets/Scripts/fight_options.gd" id="13_b8nrj"]
+[ext_resource type="FontFile" uid="uid://bsfe5osx4p2iq" path="res://Assets/font/undertale-deltarune-text-font-extended.otf" id="13_oyy7h"]
+[ext_resource type="Texture2D" uid="uid://e8skl6h0iw1r" path="res://Assets/BattleSystem/Assets/testing/de.png" id="15_o8pio"]
+[ext_resource type="Texture2D" uid="uid://dflvmh3qksmau" path="res://Assets/BattleSystem/Assets/testing/ro.png" id="16_kpxt7"]
+[ext_resource type="Script" uid="uid://ciwa0ehlioouu" path="res://Assets/Scripts/combat_preparation.gd" id="17_dmtaf"]
+[ext_resource type="Script" uid="uid://di5ftbdm007xo" path="res://Assets/Scripts/combat_anim.gd" id="18_xtu7a"]
+[ext_resource type="Script" uid="uid://dpqx3dmgtsdln" path="res://Assets/Scripts/first_fight.gd" id="19_xtu7a"]
+[ext_resource type="LabelSettings" uid="uid://bqnhl2012l5uw" path="res://Assets/tress/LabelSetting/debug_2.tres" id="21_8i4m4"]
+[ext_resource type="Script" uid="uid://bd53ldki2fgpy" path="res://Assets/Scripts/menu_anim.gd" id="22_ku1ys"]
+[ext_resource type="Script" uid="uid://dgswl4erfb2ka" path="res://Assets/Scripts/YamexInfo_anim.gd" id="22_swf6i"]
+[ext_resource type="Script" uid="uid://b2qjldg3g2el7" path="res://Assets/Scripts/damage_system.gd" id="23_lrtp6"]
+[ext_resource type="Texture2D" uid="uid://bfw1451tql3kr" path="res://Assets/Sprites/Battle/menu.png" id="24_lgmkf"]
+[ext_resource type="Script" uid="uid://cmyknjjoanh0" path="res://Assets/Scripts/yamex_damage_system.gd" id="26_7byht"]
+[ext_resource type="Texture2D" uid="uid://cko0n6ufuxv2m" path="res://Assets/Sprites/Battle/arrow_down.png" id="27_7byht"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7byht"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_lrtp6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_lgmkf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ku1ys")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_a151n")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_06x1p"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("16_kpxt7")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:region_rect")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Rect2(1786, 183, 100, 87)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.765, 0.765)]
+}
+
+[sub_resource type="Animation" id="Animation_dmtaf"]
+resource_name = "damged"
+
+[sub_resource type="Animation" id="Animation_xtu7a"]
+resource_name = "fight"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Rect2(547, 572, 117, 115)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("16_kpxt7")]
+}
+
+[sub_resource type="Animation" id="Animation_bedcm"]
+resource_name = "fight_idle"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Rect2(730, 754, 70, 80)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.63, 0.63)]
+}
+
+[sub_resource type="Animation" id="Animation_62t7e"]
+resource_name = "idle"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("16_kpxt7")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:region_rect")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Rect2(1786, 183, 100, 87)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.765, 0.765)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bedcm"]
+_data = {
+&"RESET": SubResource("Animation_06x1p"),
+&"damged": SubResource("Animation_dmtaf"),
+&"fight": SubResource("Animation_xtu7a"),
+&"fight_idle": SubResource("Animation_bedcm"),
+&"idle": SubResource("Animation_62t7e")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_lrtp6"]
+font_size = 12
+outline_size = 5
+outline_color = Color(1, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_7byht"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(160.939, 53.4278)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ngjvc"]
+resource_name = "damage"
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-35.7581, 7.43501), Vector2(-18.394, -5.404), Vector2(-1.02958, -1.4836)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.75, 0.95),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8i4m4"]
+_data = {
+&"RESET": SubResource("Animation_7byht"),
+&"damage": SubResource("Animation_ngjvc")
+}
+
+[sub_resource type="Animation" id="Animation_8i4m4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Rect2(1786, 183, 100, 87)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.765, 0.765)]
+}
+
+[sub_resource type="Animation" id="Animation_swf6i"]
+resource_name = "fight"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Rect2(17, 715, 71, 82)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.615, 0.615)]
+}
+
+[sub_resource type="Animation" id="Animation_lrtp6"]
+resource_name = "idle"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Rect2(1786, 183, 100, 87)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.765, 0.765)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_62t7e"]
+_data = {
+&"RESET": SubResource("Animation_8i4m4"),
+&"fight": SubResource("Animation_swf6i"),
+&"idle": SubResource("Animation_lrtp6")
+}
+
+[sub_resource type="Animation" id="Animation_gr8fj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Rect2(8, 19, 35, 37)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("15_o8pio")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite:region_enabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_o8pio"]
+resource_name = "fight"
+length = 0.7
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Rect2(8, 72, 32, 48), Rect2(76, 74, 45, 47), Rect2(144, 74, 45, 47), Rect2(212, 74, 43, 48), Rect2(349, 76, 41, 45), Rect2(420, 75, 34, 46), Rect2(488, 76, 35, 45)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:region_enabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("15_o8pio")]
+}
+
+[sub_resource type="Animation" id="Animation_416k2"]
+resource_name = "idle"
+length = 0.6
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("10_86rny")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:region_enabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kpxt7"]
+_data = {
+&"RESET": SubResource("Animation_gr8fj"),
+&"fight": SubResource("Animation_o8pio"),
+&"idle": SubResource("Animation_416k2")
+}
+
+[sub_resource type="Animation" id="Animation_nswdq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("11_etwmt")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:region_enabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_06vlu"]
+resource_name = "fight"
+
+[sub_resource type="Animation" id="Animation_j13pc"]
+resource_name = "idle"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("11_etwmt")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:region_enabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_it2ok"]
+_data = {
+&"RESET": SubResource("Animation_nswdq"),
+&"fight": SubResource("Animation_06vlu"),
+&"idle": SubResource("Animation_j13pc")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_7yupy"]
+font = ExtResource("13_oyy7h")
+font_size = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lgmkf"]
+bg_color = Color(0.455403, 1.07693e-06, 2.16588e-07, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d0cy8"]
+bg_color = Color(1, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_kpxt7"]
+font = ExtResource("3_o8pio")
+font_size = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o8pio"]
+bg_color = Color(0, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ngjvc"]
+bg_color = Color(0.996475, 0.811785, 0.175546, 1)
+
+[node name="debug_2" type="Node2D"]
+texture_filter = 1
+
+[node name="Camera" parent="." instance=ExtResource("12_ku1ys")]
+zoom = Vector2(5.34, 5.34)
+
+[node name="Wallpeper" type="Node2D" parent="."]
+
+[node name="Background" type="Node2D" parent="Wallpeper"]
+z_index = -999
+
+[node name="ColorRect2" type="ColorRect" parent="Wallpeper/Background"]
+visible = false
+clip_contents = true
+offset_right = 200.0
+offset_bottom = 150.0
+color = Color(0, 0, 0, 1)
+
+[node name="Back" type="Sprite2D" parent="Wallpeper/Background"]
+visible = false
+position = Vector2(0, 27.7223)
+scale = Vector2(0.430851, 0.719055)
+texture = ExtResource("1_j5sam")
+centered = false
+region_enabled = true
+region_rect = Rect2(1210, 474, 189, 170)
+
+[node name="ColorRect" type="ColorRect" parent="Wallpeper/Background"]
+visible = false
+clip_contents = true
+offset_left = 61.0
+offset_right = 200.0
+offset_bottom = 150.0
+color = Color(0, 0, 0, 1)
+
+[node name="Nafora" type="AnimatedSprite2D" parent="Wallpeper/Background/ColorRect"]
+visible = false
+position = Vector2(37.4777, 19.3635)
+rotation = -3.14159
+scale = Vector2(0.155, 0.27729)
+sprite_frames = SubResource("SpriteFrames_7byht")
+autoplay = "default"
+frame_progress = 0.53202
+
+[node name="Enemy" type="Node2D" parent="Wallpeper"]
+unique_name_in_owner = true
+position = Vector2(160, 61)
+
+[node name="EnemyMarker" type="Marker2D" parent="Wallpeper/Enemy"]
+unique_name_in_owner = true
+position = Vector2(-33.181, -9.91821e-05)
+scale = Vector2(0.765, 0.765)
+
+[node name="Sprite" type="Sprite2D" parent="Wallpeper/Enemy"]
+position = Vector2(0, -9.91821e-05)
+scale = Vector2(0.765, 0.765)
+texture = ExtResource("16_kpxt7")
+region_enabled = true
+region_rect = Rect2(1786, 183, 100, 87)
+script = ExtResource("2_416k2")
+
+[node name="Sprite" type="AnimationPlayer" parent="Wallpeper/Enemy/Sprite"]
+libraries = {
+&"": SubResource("AnimationLibrary_bedcm")
+}
+autoplay = "idle"
+
+[node name="DamageText" type="Label" parent="Wallpeper/Enemy"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+offset_left = 160.939
+offset_top = 53.4278
+offset_right = 200.939
+offset_bottom = 77.4278
+scale = Vector2(0.81, 0.81)
+text = "12"
+label_settings = SubResource("LabelSettings_lrtp6")
+
+[node name="Anim" type="AnimationPlayer" parent="Wallpeper/Enemy/DamageText"]
+libraries = {
+&"": SubResource("AnimationLibrary_8i4m4")
+}
+
+[node name="enemy_anim" type="AnimationPlayer" parent="Wallpeper/Enemy"]
+libraries = {
+&"": SubResource("AnimationLibrary_62t7e")
+}
+
+[node name="OmyxMarker" type="Marker2D" parent="Wallpeper"]
+unique_name_in_owner = true
+position = Vector2(24, 48)
+
+[node name="YamexMarker" type="Marker2D" parent="Wallpeper"]
+unique_name_in_owner = true
+position = Vector2(24, 76)
+
+[node name="Omyx" type="Node2D" parent="Wallpeper"]
+unique_name_in_owner = true
+position = Vector2(24, 48)
+
+[node name="Sprite" type="Sprite2D" parent="Wallpeper/Omyx"]
+texture_filter = 1
+scale = Vector2(0.765, 0.765)
+texture = ExtResource("15_o8pio")
+region_enabled = true
+region_rect = Rect2(8, 19, 35, 37)
+
+[node name="Anim" type="AnimationPlayer" parent="Wallpeper/Omyx"]
+libraries = {
+&"": SubResource("AnimationLibrary_kpxt7")
+}
+autoplay = "idle"
+
+[node name="Yamex" type="Node2D" parent="Wallpeper"]
+unique_name_in_owner = true
+position = Vector2(24, 76)
+
+[node name="Sprite" type="Sprite2D" parent="Wallpeper/Yamex"]
+texture_filter = 1
+scale = Vector2(0.765, 0.765)
+texture = ExtResource("11_etwmt")
+region_rect = Rect2(8, 19, 35, 37)
+
+[node name="Anim" type="AnimationPlayer" parent="Wallpeper/Yamex"]
+libraries = {
+&"": SubResource("AnimationLibrary_it2ok")
+}
+autoplay = "idle"
+
+[node name="MenuAnim" type="Node2D" parent="."]
+script = ExtResource("22_ku1ys")
+
+[node name="DamageSystem" type="Node2D" parent="."]
+unique_name_in_owner = true
+script = ExtResource("23_lrtp6")
+
+[node name="FightOptions" type="Node2D" parent="."]
+modulate = Color(1, 1, 1, 0.513726)
+position = Vector2(1.93822, 0)
+script = ExtResource("13_b8nrj")
+
+[node name="Options" type="VBoxContainer" parent="FightOptions"]
+offset_right = 200.0
+offset_bottom = 84.0
+scale = Vector2(0.4, 0.4)
+theme_override_constants/separation = -9
+
+[node name="Label" type="Label" parent="FightOptions/Options"]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 2
+text = "Current option : Fight"
+label_settings = SubResource("LabelSettings_7yupy")
+
+[node name="Label2" type="Label" parent="FightOptions/Options"]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 2
+text = "Combat phase : Test"
+label_settings = SubResource("LabelSettings_7yupy")
+
+[node name="Label3" type="Label" parent="FightOptions/Options"]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 2
+text = "Specific Character : Omyx"
+label_settings = SubResource("LabelSettings_7yupy")
+
+[node name="Label4" type="Label" parent="FightOptions/Options"]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 2
+text = "Omyx Health : 100/100"
+label_settings = SubResource("LabelSettings_7yupy")
+
+[node name="Label5" type="Label" parent="FightOptions/Options"]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 2
+text = "Yamex Health : 120/120"
+label_settings = SubResource("LabelSettings_7yupy")
+
+[node name="Label6" type="Label" parent="FightOptions/Options"]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 2
+text = "Can Select : true"
+label_settings = SubResource("LabelSettings_7yupy")
+
+[node name="Label7" type="Label" parent="FightOptions/Options"]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 2
+text = "Omyx Damage : 20"
+label_settings = SubResource("LabelSettings_7yupy")
+
+[node name="Label8" type="Label" parent="FightOptions/Options"]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 2
+text = "Yamex Damage : 10"
+label_settings = SubResource("LabelSettings_7yupy")
+
+[node name="Label9" type="Label" parent="FightOptions/Options"]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 2
+text = "Strike force : 0.0"
+label_settings = SubResource("LabelSettings_7yupy")
+
+[node name="Label10" type="Label" parent="FightOptions/Options"]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 2
+text = "selected item : "
+label_settings = SubResource("LabelSettings_7yupy")
+
+[node name="Label11" type="Label" parent="FightOptions/Options"]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 2
+text = "can select item : false"
+label_settings = SubResource("LabelSettings_7yupy")
+
+[node name="YamexDamageSystem" type="Node2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(100, -7.6)
+scale = Vector2(0.5, 0.5)
+script = ExtResource("26_7byht")
+
+[node name="box" type="NinePatchRect" parent="YamexDamageSystem"]
+self_modulate = Color(0, 0.774384, 0.922132, 1)
+offset_left = -53.0
+offset_top = -12.0
+offset_right = 53.0
+offset_bottom = 12.0
+texture = ExtResource("24_lgmkf")
+region_rect = Rect2(23, 569, 10, 38)
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="Arrow1" type="NinePatchRect" parent="YamexDamageSystem"]
+self_modulate = Color(0, 0.774384, 0.922132, 1)
+offset_left = -49.2553
+offset_top = -8.39163
+offset_right = -27.2553
+offset_bottom = 7.60837
+texture = ExtResource("24_lgmkf")
+region_rect = Rect2(23, 569, 10, 38)
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="Arrow" type="Sprite2D" parent="YamexDamageSystem/Arrow1"]
+position = Vector2(10.8316, 7.74126)
+texture = ExtResource("27_7byht")
+region_rect = Rect2(0, 2, 16, 12)
+
+[node name="Arrow2" type="NinePatchRect" parent="YamexDamageSystem"]
+self_modulate = Color(0, 0.774384, 0.922132, 1)
+offset_left = -23.5073
+offset_top = -8.13329
+offset_right = -1.50734
+offset_bottom = 7.86671
+texture = ExtResource("24_lgmkf")
+region_rect = Rect2(23, 569, 10, 38)
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="Arrow" type="Sprite2D" parent="YamexDamageSystem/Arrow2"]
+position = Vector2(10.8316, 7.74126)
+texture = ExtResource("27_7byht")
+region_rect = Rect2(18, 0, 12, 16)
+
+[node name="Arrow3" type="NinePatchRect" parent="YamexDamageSystem"]
+self_modulate = Color(0, 0.774384, 0.922132, 1)
+offset_left = 2.20778
+offset_top = -8.2197
+offset_right = 24.2078
+offset_bottom = 7.7803
+texture = ExtResource("24_lgmkf")
+region_rect = Rect2(23, 569, 10, 38)
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="Arrow" type="Sprite2D" parent="YamexDamageSystem/Arrow3"]
+position = Vector2(10.8316, 7.74126)
+texture = ExtResource("27_7byht")
+region_rect = Rect2(34, 0, 12, 16)
+
+[node name="Arrow4" type="NinePatchRect" parent="YamexDamageSystem"]
+self_modulate = Color(0, 0.774384, 0.922132, 1)
+offset_left = 26.7823
+offset_top = -8.05601
+offset_right = 48.7823
+offset_bottom = 7.94399
+texture = ExtResource("24_lgmkf")
+region_rect = Rect2(23, 569, 10, 38)
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="Arrow" type="Sprite2D" parent="YamexDamageSystem/Arrow4"]
+position = Vector2(10.8316, 7.74126)
+texture = ExtResource("27_7byht")
+region_rect = Rect2(48, 2, 16, 12)
+
+[node name="Bar" type="Node2D" parent="YamexDamageSystem"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-39.4033, -0.0367368)
+scale = Vector2(3, 3)
+
+[node name="DamgeBarLiYamex5" type="NinePatchRect" parent="YamexDamageSystem/Bar"]
+offset_left = -10.2619
+offset_top = -8.20899
+offset_right = 11.7381
+offset_bottom = 7.79101
+texture = ExtResource("24_lgmkf")
+region_rect = Rect2(23, 620, 10, 38)
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="Bar2" type="Node2D" parent="YamexDamageSystem"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-14.2484, -0.132383)
+scale = Vector2(3, 3)
+
+[node name="DamgeBarLiYamex5" type="NinePatchRect" parent="YamexDamageSystem/Bar2"]
+offset_left = -10.2619
+offset_top = -8.20899
+offset_right = 11.7381
+offset_bottom = 7.79101
+texture = ExtResource("24_lgmkf")
+region_rect = Rect2(23, 620, 10, 38)
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="Bar3" type="Node2D" parent="YamexDamageSystem"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(11.7364, 0.443833)
+scale = Vector2(3, 3)
+
+[node name="DamgeBarLiYamex5" type="NinePatchRect" parent="YamexDamageSystem/Bar3"]
+offset_left = -10.2619
+offset_top = -8.20899
+offset_right = 11.7381
+offset_bottom = 7.79101
+texture = ExtResource("24_lgmkf")
+region_rect = Rect2(23, 620, 10, 38)
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="Bar4" type="Node2D" parent="YamexDamageSystem"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(36.7367, 0.272569)
+scale = Vector2(3, 3)
+
+[node name="DamgeBarLiYamex5" type="NinePatchRect" parent="YamexDamageSystem/Bar4"]
+offset_left = -10.2619
+offset_top = -8.20899
+offset_right = 11.7381
+offset_bottom = 7.79101
+texture = ExtResource("24_lgmkf")
+region_rect = Rect2(23, 620, 10, 38)
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="CombatPreparation" type="Node2D" parent="."]
+script = ExtResource("17_dmtaf")
+
+[node name="CombatAnim" type="Node2D" parent="."]
+unique_name_in_owner = true
+script = ExtResource("18_xtu7a")
+
+[node name="FirstFight" type="Node2D" parent="."]
+script = ExtResource("19_xtu7a")
+
+[node name="BattleMenu" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+offset = Vector2(-5, 0)
+transform = Transform2D(1, 0, 0, 1, -5, 0)
+follow_viewport_enabled = true
+
+[node name="Control" type="Control" parent="BattleMenu"]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 0
+offset_right = 200.0
+offset_bottom = 150.0
+metadata/_edit_lock_ = true
+
+[node name="o_OmyxInfo" type="Node2D" parent="BattleMenu/Control"]
+unique_name_in_owner = true
+position = Vector2(59.9736, 115.158)
+scale = Vector2(1, 0.825)
+
+[node name="Hide" type="ColorRect" parent="BattleMenu/Control/o_OmyxInfo"]
+clip_contents = true
+offset_left = -19.0
+offset_top = -12.0
+offset_right = 19.0
+color = Color(0.301961, 0.301961, 0.301961, 0)
+
+[node name="Omyx" type="NinePatchRect" parent="BattleMenu/Control/o_OmyxInfo/Hide"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -0.0856133
+offset_top = -0.140213
+offset_right = 52.9144
+offset_bottom = 28.8598
+scale = Vector2(0.725, 0.725)
+texture = ExtResource("2_b8nrj")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+
+[node name="name" type="Label" parent="BattleMenu/Control/o_OmyxInfo/Hide/Omyx"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 4.0
+offset_right = 89.0
+offset_bottom = 28.0
+scale = Vector2(0.5, 0.5)
+theme_override_fonts/font = ExtResource("13_oyy7h")
+theme_override_font_sizes/font_size = 12
+text = "Omyx"
+horizontal_alignment = 1
+
+[node name="HP" type="Label" parent="BattleMenu/Control/o_OmyxInfo/Hide/Omyx"]
+layout_mode = 0
+offset_left = 7.05541
+offset_top = 12.5037
+offset_right = 39.0554
+offset_bottom = 36.5037
+scale = Vector2(0.435, 0.435)
+theme_override_fonts/font = ExtResource("13_oyy7h")
+theme_override_font_sizes/font_size = 12
+text = "HP"
+
+[node name="HealthBar" type="ProgressBar" parent="BattleMenu/Control/o_OmyxInfo/Hide/Omyx"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 16.0
+offset_right = 31.0
+offset_bottom = 20.0
+theme_override_styles/background = SubResource("StyleBoxFlat_lgmkf")
+theme_override_styles/fill = SubResource("StyleBoxFlat_d0cy8")
+value = 100.0
+show_percentage = false
+
+[node name="HealthText" type="Label" parent="BattleMenu/Control/o_OmyxInfo/Hide/Omyx"]
+layout_mode = 0
+offset_left = 31.8749
+offset_top = 15.7061
+offset_right = 45.8749
+offset_bottom = 19.7061
+text = "30/30"
+label_settings = SubResource("LabelSettings_kpxt7")
+
+[node name="o_YamexInfo" type="Node2D" parent="BattleMenu/Control"]
+unique_name_in_owner = true
+position = Vector2(144.137, 115.366)
+scale = Vector2(1, 0.825)
+
+[node name="Hide" type="ColorRect" parent="BattleMenu/Control/o_YamexInfo"]
+clip_contents = true
+offset_left = -19.0
+offset_top = -11.0
+offset_right = 19.0
+color = Color(0.301961, 0.301961, 0.301961, 0)
+
+[node name="Yamex" type="NinePatchRect" parent="BattleMenu/Control/o_YamexInfo/Hide"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -0.0856133
+offset_top = -0.140213
+offset_right = 52.9144
+offset_bottom = 28.8598
+scale = Vector2(0.725, 0.725)
+texture = ExtResource("2_b8nrj")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+
+[node name="name" type="Label" parent="BattleMenu/Control/o_YamexInfo/Hide/Yamex"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 5.0
+offset_right = 88.0
+offset_bottom = 29.0
+scale = Vector2(0.5, 0.5)
+theme_override_fonts/font = ExtResource("13_oyy7h")
+theme_override_font_sizes/font_size = 12
+text = "Yamex"
+horizontal_alignment = 1
+
+[node name="HP" type="Label" parent="BattleMenu/Control/o_YamexInfo/Hide/Yamex"]
+layout_mode = 0
+offset_left = 7.05541
+offset_top = 12.5037
+offset_right = 39.0554
+offset_bottom = 36.5037
+scale = Vector2(0.435, 0.435)
+theme_override_fonts/font = ExtResource("13_oyy7h")
+theme_override_font_sizes/font_size = 12
+text = "HP"
+
+[node name="HealthBar" type="ProgressBar" parent="BattleMenu/Control/o_YamexInfo/Hide/Yamex"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 16.0
+offset_right = 29.0
+offset_bottom = 20.0
+theme_override_styles/background = SubResource("StyleBoxFlat_lgmkf")
+theme_override_styles/fill = SubResource("StyleBoxFlat_o8pio")
+max_value = 110.0
+value = 110.0
+show_percentage = false
+
+[node name="HealthText" type="Label" parent="BattleMenu/Control/o_YamexInfo/Hide/Yamex"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 16.0
+offset_right = 52.0
+offset_bottom = 33.0
+text = "20/20"
+label_settings = SubResource("LabelSettings_kpxt7")
+
+[node name="Essence" type="NinePatchRect" parent="BattleMenu/Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 40.2624
+offset_top = 113.076
+offset_right = 214.262
+offset_bottom = 131.076
+scale = Vector2(0.725, 0.725)
+texture = ExtResource("2_b8nrj")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+
+[node name="ProgressBar" type="ProgressBar" parent="BattleMenu/Control/Essence"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 7.0
+offset_right = 167.0
+offset_bottom = 11.0
+theme_override_styles/background = SubResource("StyleBoxFlat_lgmkf")
+theme_override_styles/fill = SubResource("StyleBoxFlat_ngjvc")
+show_percentage = false
+
+[node name="OptionsBattle" type="Control" parent="BattleMenu/Control"]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_top = 1.54217
+offset_right = 40.0
+offset_bottom = 41.5422
+script = ExtResource("1_7yupy")
+
+[node name="Fight" type="NinePatchRect" parent="BattleMenu/Control/OptionsBattle"]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 0
+offset_left = 40.2624
+offset_top = 125.076
+offset_right = 69.2624
+offset_bottom = 154.076
+scale = Vector2(0.725, 0.725)
+texture = ExtResource("2_b8nrj")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+
+[node name="SwordIcon" type="Sprite2D" parent="BattleMenu/Control/OptionsBattle/Fight"]
+position = Vector2(15, 15)
+texture = ExtResource("4_o8pio")
+
+[node name="Skils" type="NinePatchRect" parent="BattleMenu/Control/OptionsBattle"]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 0
+offset_left = 61.2624
+offset_top = 125.076
+offset_right = 90.2624
+offset_bottom = 154.076
+scale = Vector2(0.725, 0.725)
+texture = ExtResource("2_b8nrj")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+
+[node name="SwordIcon" type="Sprite2D" parent="BattleMenu/Control/OptionsBattle/Skils"]
+position = Vector2(15, 15)
+texture = ExtResource("5_kpxt7")
+
+[node name="Braclet" type="NinePatchRect" parent="BattleMenu/Control/OptionsBattle"]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 0
+offset_left = 82.2624
+offset_top = 125.076
+offset_right = 111.262
+offset_bottom = 154.076
+scale = Vector2(0.725, 0.725)
+texture = ExtResource("2_b8nrj")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+
+[node name="SwordIcon" type="Sprite2D" parent="BattleMenu/Control/OptionsBattle/Braclet"]
+position = Vector2(13.5632, 14.6168)
+scale = Vector2(0.728449, 0.824712)
+texture = ExtResource("6_416k2")
+
+[node name="Defend" type="NinePatchRect" parent="BattleMenu/Control/OptionsBattle"]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 0
+offset_left = 103.262
+offset_top = 125.076
+offset_right = 132.262
+offset_bottom = 154.076
+scale = Vector2(0.725, 0.725)
+texture = ExtResource("2_b8nrj")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+
+[node name="SwordIcon" type="Sprite2D" parent="BattleMenu/Control/OptionsBattle/Defend"]
+position = Vector2(15, 15)
+texture = ExtResource("7_gr8fj")
+
+[node name="Items" type="NinePatchRect" parent="BattleMenu/Control/OptionsBattle"]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 0
+offset_left = 124.262
+offset_top = 125.076
+offset_right = 153.262
+offset_bottom = 154.076
+scale = Vector2(0.725, 0.725)
+texture = ExtResource("2_b8nrj")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+
+[node name="SwordIcon" type="Sprite2D" parent="BattleMenu/Control/OptionsBattle/Items"]
+position = Vector2(15, 15)
+texture = ExtResource("8_j5sam")
+
+[node name="Run" type="NinePatchRect" parent="BattleMenu/Control/OptionsBattle"]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 0
+offset_left = 145.262
+offset_top = 125.076
+offset_right = 174.262
+offset_bottom = 154.076
+scale = Vector2(0.725, 0.725)
+texture = ExtResource("2_b8nrj")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+
+[node name="SwordIcon" type="Sprite2D" parent="BattleMenu/Control/OptionsBattle/Run"]
+position = Vector2(15.1724, 15.1724)
+scale = Vector2(0.752351, 0.844828)
+texture = ExtResource("9_nvim0")
+
+[node name="ItemInfo" type="NinePatchRect" parent="."]
+unique_name_in_owner = true
+texture_filter = 1
+offset_left = 167.0
+offset_top = 104.0
+offset_right = 212.0
+offset_bottom = 165.0
+scale = Vector2(0.725, 0.725)
+texture = ExtResource("2_b8nrj")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+
+[node name="SelectItem" type="VBoxContainer" parent="ItemInfo"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 10.8367
+offset_top = 9.89937
+offset_right = 58.8367
+offset_bottom = 49.8994
+scale = Vector2(0.5, 0.5)
+theme_override_constants/separation = 6
+script = ExtResource("10_42h8c")
+
+[node name="page" type="Label" parent="ItemInfo"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 51.0
+offset_right = 119.0
+offset_bottom = 61.0
+scale = Vector2(0.285, 0.285)
+theme_override_fonts/font = ExtResource("11_a151n")
+theme_override_font_sizes/font_size = 8
+text = "page 1/1"
+label_settings = ExtResource("21_8i4m4")
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="o_anim" type="Control" parent="ItemInfo"]
+anchors_preset = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 40.0
+offset_bottom = 56.0
+script = ExtResource("22_swf6i")
+
+[node name="DamgeBar" type="NinePatchRect" parent="."]
+unique_name_in_owner = true
+self_modulate = Color(0.635313, 0, 0.188276, 1)
+offset_left = 68.712
+offset_top = -14.0
+offset_right = 130.712
+offset_bottom = -2.0
+texture = ExtResource("24_lgmkf")
+region_rect = Rect2(23, 569, 10, 38)
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="Bar" type="NinePatchRect" parent="DamgeBar"]
+modulate = Color(0.829469, 0, 0.387144, 1)
+layout_mode = 0
+offset_left = 55.25
+offset_top = 0.029
+offset_right = 62.25
+offset_bottom = 12.029
+texture = ExtResource("24_lgmkf")
+region_rect = Rect2(23, 569, 10, 38)
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="Mask" type="ColorRect" parent="DamgeBar"]
+clip_contents = true
+layout_mode = 0
+offset_right = 62.0
+offset_bottom = 12.0
+color = Color(1, 1, 1, 0)
+
+[node name="Bar2" type="NinePatchRect" parent="DamgeBar/Mask"]
+layout_mode = 0
+offset_left = -5.0
+offset_right = 2.0
+offset_bottom = 12.0
+texture = ExtResource("24_lgmkf")
+region_rect = Rect2(156, 567, 10, 41)
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3

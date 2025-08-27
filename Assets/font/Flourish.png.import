@@ -1,0 +1,25 @@
+[remap]
+
+importer="font_data_image"
+type="FontFile"
+uid="uid://ovwf2wt7b48a"
+path="res://.godot/imported/Flourish.png-ef30ed62ac12906e3ef7540f5915c5a2.fontdata"
+
+[deps]
+
+source_file="res://Assets/font/Flourish.png"
+dest_files=["res://.godot/imported/Flourish.png-ef30ed62ac12906e3ef7540f5915c5a2.fontdata"]
+
+[params]
+
+character_ranges=PackedStringArray("42")
+kerning_pairs=PackedStringArray()
+columns=1
+rows=1
+image_margin=Rect2i(0, 0, 0, 0)
+character_margin=Rect2i(0, 0, 0, 0)
+ascent=0
+descent=0
+fallbacks=[]
+compress=true
+scaling_mode=2

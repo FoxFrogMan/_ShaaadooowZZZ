@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://xqu3x1m552ap"
+path="res://.godot/imported/farm ost (1).mp3-372b559a0df42ef8cf51700584de626d.mp3str"
+
+[deps]
+
+source_file="res://Assets/Music/farm ost (1).mp3"
+dest_files=["res://.godot/imported/farm ost (1).mp3-372b559a0df42ef8cf51700584de626d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,23 @@
+[
+	{
+		"name": "testing1",
+		"text": "* Hello. I am Yamex \n * How are you!",
+		"sound" : "res://Assets/Sound/SndOriginal/sound.wav",
+		"image": "res://Assets/Sprites/DialogueTalking/omyxthinks.png",
+		"image_side" : "1",
+		"speed" : 0.03
+	},
+	{
+		"name": "Yamex",
+		"text": "( Yamex laughs lightly! )",
+		"sound" : "res://Assets/Sound/SndOriginal/Blip45.wav",
+		"image": ["res://Assets/Sprites/DialogueTalking/yamexlaughs1.png", "res://Assets/Sprites/DialogueTalking/yamexlaughs2.png"],
+		"image_duration": 0.2,
+		"image_side": "1",
+		"speed": 0.03,
+	},
+	{
+		"name": "testing3",
+		"text": "twtnig test. heahaha. Gha Gha Ghaaaa!"
+	},
+]

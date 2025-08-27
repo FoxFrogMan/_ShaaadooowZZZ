@@ -1,0 +1,67 @@
+[gd_resource type="SpriteFrames" load_steps=10 format=3 uid="uid://bxgv85qkovmgr"]
+
+[ext_resource type="Texture2D" uid="uid://dwki8dlcddvdc" path="res://Assets/Sprites/KantroPrologue/fire nigga .png" id="1_6vt1a"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7v5ot"]
+atlas = ExtResource("1_6vt1a")
+region = Rect2(0, 0, 15, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nao33"]
+atlas = ExtResource("1_6vt1a")
+region = Rect2(15, 0, 15, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t6cak"]
+atlas = ExtResource("1_6vt1a")
+region = Rect2(30, 0, 15, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qdtaf"]
+atlas = ExtResource("1_6vt1a")
+region = Rect2(45, 0, 15, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3p55p"]
+atlas = ExtResource("1_6vt1a")
+region = Rect2(0, 18, 15, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ebvvf"]
+atlas = ExtResource("1_6vt1a")
+region = Rect2(15, 18, 15, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dgc7y"]
+atlas = ExtResource("1_6vt1a")
+region = Rect2(30, 18, 15, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8v7wj"]
+atlas = ExtResource("1_6vt1a")
+region = Rect2(45, 18, 15, 18)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7v5ot")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nao33")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t6cak")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qdtaf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3p55p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ebvvf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dgc7y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8v7wj")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]

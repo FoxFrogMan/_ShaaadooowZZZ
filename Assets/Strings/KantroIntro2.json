@@ -1,0 +1,8 @@
+[
+	{
+		"name": "Kantro",
+		"image": "res://Assets/Sprites/DialogueTalking/kantrocurious.png",
+		"text":"I better get going...",
+		"sound": "res://Assets/Sound/snd_txtrud_ch1.wav"
+	},
+]

@@ -1,0 +1,16 @@
+[
+	{
+		"name": "???",
+		"text": "attention all residents of Azwad village!",
+		"sound": "",
+		"speed": 0.03,
+		"no_skip": false
+	},
+	{
+		"name": "???",
+		"text": "I have an important announcement to make on this day, so everyone gather quickly!",
+		"sound": "",
+		"speed": 0.03,
+		"no_skip": false
+	},
+]

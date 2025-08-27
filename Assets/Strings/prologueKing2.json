@@ -1,0 +1,44 @@
+[
+	{
+		"name": "The King",
+		"text": "usually I put the terms... but you've intreiged me\n... what are your terms?",
+		"image": "res://Assets/Sprites/DialogueTalking/kingcurious.png",
+		"sound": "res://Assets/Sound/snd_txtber_ch1.wav"
+	},
+	{
+		"name": "Kantro",
+		"text": "my terms are as follows :",
+		"image": "res://Assets/Sprites/DialogueTalking/kantrohappy.png",
+		"sound": "res://Assets/Sound/snd_txtber_ch1.wav"
+	},
+	{
+		"name": "Kantro",
+		"text": "1-if your orders dont line up with my morals I dont guarentee they get done",
+		"image": "res://Assets/Sprites/DialogueTalking/kantrohappy.png",
+		"sound": "res://Assets/Sound/snd_txtber_ch1.wav"
+	},
+	{
+		"name": "Kantro",
+		"text": "2- Dont even THINK about taking my [red: ShadowZ ]",
+		"image": "res://Assets/Sprites/DialogueTalking/kantrohappy.png",
+		"sound": "res://Assets/Sound/snd_txtber_ch1.wav"
+	},
+	{
+		"name": "Kantro",
+		"text": "and 3- ...\nI want a box of chocolate ice cream handed to me every day",
+		"image": "res://Assets/Sprites/DialogueTalking/kantrohappy.png",
+		"sound": "res://Assets/Sound/snd_txtber_ch1.wav"
+	},
+	{
+		"name": "The King",
+		"text": "...\n...\n...",
+		"image": "res://Assets/Sprites/DialogueTalking/kingthink.png",
+		"sound": "res://Assets/Sound/snd_txtber_ch1.wav"
+	},
+	{
+		"name": "The King",
+		"text": "heh",
+		"image": "res://Assets/Sprites/DialogueTalking/kingthink.png",
+		"sound": "res://Assets/Sound/snd_txtber_ch1.wav"
+	},
+]

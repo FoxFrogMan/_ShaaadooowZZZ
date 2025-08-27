@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dp8rvi0xvmwji"]
+
+[ext_resource type="Script" uid="uid://73wrgsg1xy5b" path="res://Assets/Scripts/o_following.gd" id="1_s7v21"]
+
+[node name="oFollowing" type="Node2D"]
+script = ExtResource("1_s7v21")

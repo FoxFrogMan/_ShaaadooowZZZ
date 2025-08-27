@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dov4xf0u2icam"
+path="res://.godot/imported/super battle.mp3-76d55e77dc2410b3b8c58232e992c06d.mp3str"
+
+[deps]
+
+source_file="res://Assets/Music/super battle.mp3"
+dest_files=["res://.godot/imported/super battle.mp3-76d55e77dc2410b3b8c58232e992c06d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,38 @@
+[
+	{
+		"name": "Omyx",
+		"text": "...",
+		"image": "res://Assets/Sprites/DialogueTalking/omyxthinks.png",
+		"sound" : "res://Assets/Sound/SndOriginal/omyx voice.mp3",
+		"image_side": "0",
+		"speed": 0.03,
+		"no_skip": false
+	},
+	{
+		"name": "Omyx",
+		"text": "what about you? What do you want to be in the future?",
+		"image": "res://Assets/Sprites/DialogueTalking/omyxthinks.png",
+		"sound" : "res://Assets/Sound/SndOriginal/omyx voice.mp3",
+		"image_side": "0",
+		"speed": 0.03,
+		"no_skip": false
+	},
+	{
+		"name": "Yamex",
+		"text": "Well . . . Actually, I've never seriously thought about it before",
+		"image": "res://Assets/Sprites/DialogueTalking/yamexcurious.png",
+		"sound": "res://Assets/Sound/SndOriginal/yamex voice.mp3",
+		"image_side": "1",
+		"speed": 0.03,
+		"no_skip": false
+	},
+	{
+		"name": "Yamex",
+		"text": "but if I had to choose, I want to",
+		"image": "res://Assets/Sprites/DialogueTalking/yamexhand.png",
+		"sound": "res://Assets/Sound/SndOriginal/yamex voice.mp3",
+		"image_side": "1",
+		"speed": 0.03,
+		"no_skip": false
+	},
+]

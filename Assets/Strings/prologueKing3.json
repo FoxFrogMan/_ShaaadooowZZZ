@@ -1,0 +1,38 @@
+[
+		{
+		"name": "The King",
+		"text": "fine... but ill put down two of my own terms too",
+		"image": "res://Assets/Sprites/DialogueTalking/kinghappy.png",
+		"sound": "res://Assets/Sound/snd_txtber_ch1.wav"
+	},
+	{
+		"name": "The King",
+		"text": "1- if you DO refuse to complete a mission, i dont gaurentee your survival",
+		"image": "res://Assets/Sprites/DialogueTalking/kinghappy.png",
+		"sound": "res://Assets/Sound/snd_txtber_ch1.wav"
+	},
+	{
+		"name": "The King",
+		"text": "and 2- . . .",
+		"image": "res://Assets/Sprites/DialogueTalking/kingcurious.png",
+		"sound": "res://Assets/Sound/snd_txtber_ch1.wav"
+	},
+	{
+		"name": "The King",
+		"text": "we might not always have chocolate,do you have an issue with strawberry?",
+		"image": "res://Assets/Sprites/DialogueTalking/kingthink.png",
+		"sound": "res://Assets/Sound/snd_txtber_ch1.wav"
+	},
+	{
+		"name": "Kantro",
+		"text": "not at all",
+		"image": "res://Assets/Sprites/DialogueTalking/kantrohappy.png",
+		"sound": "res://Assets/Sound/snd_txtber_ch1.wav"
+	},
+	{
+		"name": "The King",
+		"text": "well then. . .",
+		"image": "res://Assets/Sprites/DialogueTalking/kinghappy.png",
+		"sound": "res://Assets/Sound/snd_txtber_ch1.wav"
+	},
+]

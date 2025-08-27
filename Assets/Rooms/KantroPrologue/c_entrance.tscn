@@ -1,0 +1,650 @@
+[gd_scene load_steps=26 format=3 uid="uid://m4ixoii636u2"]
+
+[ext_resource type="PackedScene" uid="uid://bwsceyulre4ip" path="res://Assets/Scenes/Camera.tscn" id="1_ptcjf"]
+[ext_resource type="Script" uid="uid://dbxjvx8nvx7f4" path="res://Assets/Scripts/KantroPrologue/c_entrance.gd" id="1_wnnqu"]
+[ext_resource type="Texture2D" uid="uid://kyxvkbco3jvy" path="res://Assets/Sprites/KantroPrologue/castle entrence.png" id="2_srt5c"]
+[ext_resource type="SpriteFrames" uid="uid://c20ejw7ai2x3k" path="res://Assets/tress/AnimatedSprite/plants1.tres" id="3_hkbe7"]
+[ext_resource type="PackedScene" uid="uid://dxpb8siqjga5l" path="res://Assets/Scenes/player.tscn" id="4_cka5b"]
+[ext_resource type="Texture2D" uid="uid://bqm6fk4cfv8f0" path="res://Assets/Sprites/KantroPrologue/castle gate.png" id="5_r5chb"]
+[ext_resource type="Texture2D" uid="uid://c7dd5yetni0yt" path="res://Assets/Sprites/KantroPrologue/royal spear guard .png" id="6_41t7h"]
+[ext_resource type="PackedScene" uid="uid://cmmxk5mu5sy3o" path="res://Assets/InventorySystem/intract_reciever.tscn" id="7_itqit"]
+[ext_resource type="AudioStream" uid="uid://b873js70fw8m" path="res://Assets/Sound/spear guard hit sound.mp3" id="8_g5dld"]
+[ext_resource type="PackedScene" uid="uid://k08olu47p0kv" path="res://Assets/InventorySystem/door.tscn" id="8_yy4ee"]
+[ext_resource type="FontFile" uid="uid://b7sy7x0nnuw3m" path="res://Assets/font/PressStart2P-Regular.ttf" id="9_cka5b"]
+[ext_resource type="AudioStream" uid="uid://d38vnxj0nhcl4" path="res://Assets/Sound/open gate sound.mp3" id="9_qddtk"]
+[ext_resource type="FontFile" uid="uid://dvxn74w7mqmg5" path="res://Assets/font/FlourishTop.png" id="10_r5chb"]
+[ext_resource type="FontFile" uid="uid://ovwf2wt7b48a" path="res://Assets/font/Flourish.png" id="11_41t7h"]
+[ext_resource type="AudioStream" uid="uid://bcfqfspaowtt1" path="res://Assets/Music/castel garden theme.mp3" id="13_k7b4e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r53fq"]
+size = Vector2(84, 38)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d5eqj"]
+size = Vector2(36, 18)
+
+[sub_resource type="Animation" id="Animation_srn14"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("guard/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("guard2/Sprite2D2:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("guard2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(127, 170)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("guard:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(71, 170)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("gate/gateSprite:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("gate/CollisionShape2D:disabled")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_1csd0"]
+resource_name = "gate_open"
+length = 5.8
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("guard/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.6, 1, 1.4, 1.8, 2.2, 2.6, 3, 3.3, 3.5, 3.6, 3.7, 3.8, 3.9, 4, 4.1, 4.2, 4.3, 4.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [10, 11, 12, 13, 12, 11, 12, 13, 12, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("guard2/Sprite2D2:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.6, 1, 1.4, 1.8, 2.2, 2.6, 3, 3.3, 3.5, 3.6, 3.7, 3.8, 3.9, 4, 4.1, 4.2, 4.3, 4.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [10, 11, 12, 13, 12, 11, 12, 13, 12, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("guard2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2, 3.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(127, 170), Vector2(127, 170), Vector2(159, 170)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("guard:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.2, 3.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(71, 170), Vector2(71, 170), Vector2(39, 170)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("gate/gateSprite:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 5, 5.1, 5.2, 5.3, 5.4, 5.5, 5.6, 5.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("gate/CollisionShape2D:disabled")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 5.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/6/type = "audio"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("sfxer")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("8_g5dld")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("9_qddtk")
+}],
+"times": PackedFloat32Array(3.3, 5)
+}
+tracks/6/use_blend = true
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vhgjw"]
+_data = {
+&"RESET": SubResource("Animation_srn14"),
+&"gate_open": SubResource("Animation_1csd0")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7n7cn"]
+size = Vector2(85, 20)
+
+[sub_resource type="Animation" id="Animation_rvydl"]
+resource_name = "Intro"
+length = 2.0
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("C_entrance/blackScreen/ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("C_entrance/DateTitle/Control:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_m0wum"]
+resource_name = "Intro_2"
+length = 4.5
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("C_entrance/blackScreen/ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("C_entrance/DateTitle/Control:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("C_entrance/Kantro:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(100.25, 450), Vector2(100.25, 420)]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("C_entrance/Kantro/AnimatedSprite2D")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1, 4),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [&"MoveUp", 0.5, false],
+"method": &"play"
+}, {
+"args": [&"IdleUp", 1.0, false],
+"method": &"play"
+}]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("C_entrance/Kantro:direction")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Up"]
+}
+
+[sub_resource type="Animation" id="Animation_imnbc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("C_entrance/blackScreen/ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("C_entrance/DateTitle/Control:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("C_entrance/blackScreen/ColorRect:color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("C_entrance/Kantro:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(100.25, 450)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("C_entrance/Kantro:direction")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Down"]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_imnbc"]
+_data = {
+&"Intro": SubResource("Animation_rvydl"),
+&"Intro_2": SubResource("Animation_m0wum"),
+&"RESET": SubResource("Animation_imnbc")
+}
+
+[node name="C_entrance" type="Node2D"]
+y_sort_enabled = true
+scale = Vector2(4, 4)
+script = ExtResource("1_wnnqu")
+metadata/_custom_type_script = "uid://j6c3f2y4x1st"
+
+[node name="Camera" parent="." instance=ExtResource("1_ptcjf")]
+position = Vector2(100.25, 450)
+editor_draw_limits = false
+
+[node name="BottomRight" parent="Camera/Node" index="1"]
+position = Vector2(800, 1760)
+
+[node name="BG" type="Sprite2D" parent="."]
+z_index = -1
+texture_filter = 1
+texture = ExtResource("2_srt5c")
+centered = false
+
+[node name="Grass" type="AnimatedSprite2D" parent="BG"]
+modulate = Color(0.426573, 0.636356, 0.406842, 1)
+position = Vector2(189, 346)
+sprite_frames = ExtResource("3_hkbe7")
+animation = &"grass"
+autoplay = "grass"
+frame_progress = 0.378613
+
+[node name="Grass2" type="AnimatedSprite2D" parent="BG"]
+modulate = Color(0.427451, 0.635294, 0.407843, 1)
+position = Vector2(35, 345)
+sprite_frames = ExtResource("3_hkbe7")
+animation = &"grass"
+autoplay = "grass"
+frame_progress = 0.414227
+
+[node name="Grass3" type="AnimatedSprite2D" parent="BG"]
+modulate = Color(0.426573, 0.636356, 0.406842, 1)
+position = Vector2(9.25, 346)
+sprite_frames = ExtResource("3_hkbe7")
+animation = &"grass"
+autoplay = "grass"
+frame_progress = 0.378613
+
+[node name="Grass4" type="AnimatedSprite2D" parent="BG"]
+modulate = Color(0.426573, 0.636356, 0.406842, 1)
+position = Vector2(158.25, 343.5)
+sprite_frames = ExtResource("3_hkbe7")
+animation = &"grass"
+autoplay = "grass"
+frame_progress = 0.378613
+
+[node name="Grass5" type="AnimatedSprite2D" parent="BG"]
+modulate = Color(0.426573, 0.636356, 0.406842, 1)
+position = Vector2(179.75, 389.75)
+sprite_frames = ExtResource("3_hkbe7")
+animation = &"grass"
+autoplay = "grass"
+frame_progress = 0.378613
+
+[node name="Grass6" type="AnimatedSprite2D" parent="BG"]
+modulate = Color(0.426573, 0.636356, 0.406842, 1)
+position = Vector2(17.25, 390.5)
+sprite_frames = ExtResource("3_hkbe7")
+animation = &"grass"
+autoplay = "grass"
+frame_progress = 0.378613
+
+[node name="Grass7" type="AnimatedSprite2D" parent="BG"]
+modulate = Color(0.426573, 0.636356, 0.406842, 1)
+position = Vector2(53, 368)
+sprite_frames = ExtResource("3_hkbe7")
+animation = &"grass"
+autoplay = "grass"
+frame_progress = 0.378613
+
+[node name="Flower" type="AnimatedSprite2D" parent="BG"]
+modulate = Color(0.426573, 0.636356, 0.406842, 1)
+position = Vector2(160, 404.25)
+sprite_frames = ExtResource("3_hkbe7")
+animation = &"flowers"
+autoplay = "flowers"
+frame_progress = 0.306683
+
+[node name="Flower2" type="AnimatedSprite2D" parent="BG"]
+modulate = Color(0.426573, 0.636356, 0.406842, 1)
+position = Vector2(19, 419.5)
+sprite_frames = ExtResource("3_hkbe7")
+animation = &"flowers"
+autoplay = "flowers"
+frame_progress = 0.564958
+
+[node name="Flower3" type="AnimatedSprite2D" parent="BG"]
+modulate = Color(0.426573, 0.636356, 0.406842, 1)
+position = Vector2(34.25, 385.75)
+sprite_frames = ExtResource("3_hkbe7")
+animation = &"flowers"
+autoplay = "flowers"
+frame_progress = 0.564958
+
+[node name="Flower4" type="AnimatedSprite2D" parent="BG"]
+modulate = Color(0.426573, 0.636356, 0.406842, 1)
+position = Vector2(27.25, 191.5)
+sprite_frames = ExtResource("3_hkbe7")
+animation = &"flowers"
+autoplay = "flowers"
+frame_progress = 0.564958
+
+[node name="Walls" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Walls"]
+polygon = PackedVector2Array(0, 0, 0, 440, 200, 440, 200, 0, 1, 0, 1, -1, 201, -1, 201, 441, -1, 441, -1, 0)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Walls"]
+polygon = PackedVector2Array(0, 347, 55, 347, 63, 347, 63, 325, 64, 325, 64, 262, 65, 262, 65, 236, 66, 236, 66, 220, 67, 220, 67, 203, 59, 203, 59, 207, 24, 207, 24, 205, 13, 205, 13, 203, 0, 203)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Walls"]
+polygon = PackedVector2Array(200, 347, 137, 347, 137, 325, 136, 325, 136, 262, 135, 262, 135, 236, 134, 236, 134, 220, 133, 220, 133, 203, 141, 203, 141, 207, 165, 207, 165, 204, 190, 204, 190, 202, 200, 202)
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Walls"]
+polygon = PackedVector2Array(200, 161, 160, 161, 160, 159, 143, 159, 143, 121, 57, 121, 57, 159, 40, 159, 40, 161, 0, 161, 0, 100, 200, 100)
+
+[node name="spawn" type="Marker2D" parent="."]
+position = Vector2(100, 400)
+
+[node name="Kantro" parent="." instance=ExtResource("4_cka5b")]
+position = Vector2(100.25, 450)
+character = 0
+
+[node name="AnimatedSprite2D" parent="Kantro" index="0"]
+animation = &""
+frame = 0
+frame_progress = 0.0
+
+[node name="CameraTransform" parent="Kantro" index="2"]
+remote_path = NodePath("../../Camera")
+
+[node name="gate" type="StaticBody2D" parent="."]
+position = Vector2(100, 140)
+
+[node name="gateSprite" type="Sprite2D" parent="gate"]
+texture_filter = 1
+position = Vector2(-100, -140)
+texture = ExtResource("5_r5chb")
+centered = false
+hframes = 5
+vframes = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="gate"]
+position = Vector2(0, 21)
+shape = SubResource("RectangleShape2D_r53fq")
+
+[node name="guard" type="StaticBody2D" parent="."]
+position = Vector2(71, 170)
+
+[node name="Sprite2D" type="Sprite2D" parent="guard"]
+texture_filter = 1
+texture = ExtResource("6_41t7h")
+offset = Vector2(2, -20)
+flip_h = true
+hframes = 4
+vframes = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="guard"]
+position = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_d5eqj")
+
+[node name="guard2" type="StaticBody2D" parent="."]
+position = Vector2(127, 170)
+
+[node name="Sprite2D2" type="Sprite2D" parent="guard2"]
+texture_filter = 1
+texture = ExtResource("6_41t7h")
+offset = Vector2(0, -20)
+hframes = 4
+vframes = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="guard2"]
+position = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_d5eqj")
+
+[node name="gateOpenAnimation" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_vhgjw")
+}
+
+[node name="IntractReciever" parent="." instance=ExtResource("7_itqit")]
+IntractDia = "res://Assets/Strings/openGate.json"
+triggerDialogue = true
+emitSignal = true
+one_shot = true
+
+[node name="CollisionShape2D" parent="IntractReciever" index="0"]
+position = Vector2(99.625, 169.5)
+
+[node name="DOOR" parent="." instance=ExtResource("8_yy4ee")]
+target_scene = "res://Assets/Rooms/KantroPrologue/c_garden.tscn"
+
+[node name="CollisionShape2D" parent="DOOR" index="0"]
+position = Vector2(100.75, 131)
+shape = SubResource("RectangleShape2D_7n7cn")
+
+[node name="DateTitle" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="Control" type="Control" parent="DateTitle"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -261.0
+offset_top = 31.0
+offset_right = -80.0
+offset_bottom = 85.0
+grow_horizontal = 2
+scale = Vector2(3, 3)
+
+[node name="Label2" type="Label" parent="DateTitle/Control"]
+texture_filter = 1
+layout_mode = 0
+offset_top = 25.0
+offset_right = 512.0
+offset_bottom = 60.0
+scale = Vector2(0.39, 0.39)
+theme_override_fonts/font = ExtResource("9_cka5b")
+text = "-Year: 945 B.C. Ninth Month-  "
+
+[node name="Top" type="Label" parent="DateTitle/Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 18.0
+offset_top = 1.0
+offset_right = 157.0
+offset_bottom = 17.0
+theme_override_fonts/font = ExtResource("10_r5chb")
+text = "*"
+
+[node name="Down" type="Label" parent="DateTitle/Control/Top"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 2.0
+offset_top = 36.0
+offset_right = 136.0
+offset_bottom = 52.0
+theme_override_fonts/font = ExtResource("11_41t7h")
+text = "*"
+
+[node name="blackScreen" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="blackScreen"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Intro" type="AnimationPlayer" parent="."]
+root_node = NodePath("../..")
+libraries = {
+&"": SubResource("AnimationLibrary_imnbc")
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_k7b4e")
+volume_db = -10.0
+parameters/looping = true
+
+[node name="sfxer" type="AudioStreamPlayer" parent="."]
+volume_db = -5.0
+
+[connection signal="action" from="IntractReciever" to="." method="_on_intract_reciever_action"]
+
+[editable path="Camera"]
+[editable path="Kantro"]
+[editable path="IntractReciever"]
+[editable path="DOOR"]

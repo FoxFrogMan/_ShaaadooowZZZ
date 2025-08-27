@@ -1,0 +1,21 @@
+{
+	"crimson stone":{
+		"stats":["hp","atk","def"],
+		"hp":5,
+		"atk":5,
+		"def":-5,
+		"desc":"a powerfull crimson stone",
+		"img":"res://Assets/InventorySystem/itemIcons/crimson stone.png"
+	},
+	"sweatband":{
+		"stats":[],
+		"desc":"[color=#0000ff]grants the holder more rewards from their efforts[/color]\na wrist sweatband to be worn in work-outs",
+		"img":"res://Assets/InventorySystem/itemIcons/sweatband.png"
+	},
+	"headband":{
+		"stats":["atk"],
+		"atk":15,
+		"desc":"a stylish headband which [color=#ff7d00]might increase the potency of an attack[/color]",
+		"img":"res://Assets/InventorySystem/itemIcons/headband.png"
+	}
+}

@@ -1,0 +1,21 @@
+[
+	{
+		"name": "Omyx",
+		"text": "Hurry up",
+		"image": "res://Assets/Sprites/DialogueTalking/omyxhappy.png",
+		"sound": "res://Assets/Sound/SndOriginal/omyx voice.mp3",
+		"image_side": "1",
+		"speed": 0.04,
+		"no_skip": true
+	},
+	{
+		"name": "Yamex",
+		"text": "Okay okay here I come",
+		"image": "res://Assets/Sprites/DialogueTalking/yamex-_-.png",
+		"sound": "res://Assets/Sound/SndOriginal/yamex voice.mp3",
+		"image_side": "1",
+		"speed": 0.03,
+		"no_skip": true
+	},
+	
+]

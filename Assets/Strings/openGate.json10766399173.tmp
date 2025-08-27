@@ -1,0 +1,14 @@
+[
+	{
+		"name":"guard",
+		"emotion":"suprised",
+		"speaker":1,
+		"text":"oh! Kantro the Tornado! It's truly an honor to meet you."
+	},
+	{
+		"name":"guard",
+		"emotion":"happy",
+		"speaker":1,
+		"text":"His majesty is waiting for your arrival atop his throne, let us open the gate for you."
+	}
+]

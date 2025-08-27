@@ -1,0 +1,47 @@
+[
+	{
+		"name" : "Mrs Nova",
+		"text" : "Oh, hello, boys.. Did you come to help me?",
+		"options": ["Yes", "No"],
+		"option_dialogues": [
+		[
+			{
+			"name": "Omyx",
+			"text": "Hmm yeah I guess.. What do you need help with?",
+			"custom_signal" : "Yes",
+			},
+			{
+			"name": "Yamex",
+			"text": "Wait a minute! Since when do we have time? Weren't we here to look for combat equipment for you?"
+			},
+			{
+			"name": "Omyx",
+			"text": "Yes, but um... helping others is more important"
+			},
+			{
+			"name": "Yamex",
+			"text": "Okay, okay then, but what do you want help with?"
+			},
+			{
+			"name": "Mrs Nova",
+			"text": "I just need to deliver a bag of coal to the person who lives on top of the mountain. Don't worry, it's a safe and fast way."
+			},
+			{
+			"name": "Mrs Nova",
+			"text": "But first, I want you to bring a bag of coal from the blacksmith northwest of the village."
+			},
+			{
+			"name": "Omyx",
+			"text": "Okay then let's get going quickly"
+			},
+		],
+		[
+			{
+			"name": "Yamex",
+			"text": "I'm so sorry but we're in a hurry",
+			"custom_signal" : "No",
+			},
+		],
+		]
+	},
+]

@@ -1,0 +1,7 @@
+{
+	"rubixCube":{
+		"img":"res://Assets/InventorySystem/itemIcons/rubixCube.png",
+		"desc":"a cool looking puzzle (yamex can solve it in 29 seconds)",
+		"name":"rubix cube"
+	}
+}

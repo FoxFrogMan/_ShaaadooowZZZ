@@ -1,0 +1,148 @@
+[gd_scene load_steps=21 format=3 uid="uid://5x5o8guhsgtj"]
+
+[ext_resource type="Script" uid="uid://ct2naa4tiq4bt" path="res://Assets/Scripts/running4.gd" id="1_flt5r"]
+[ext_resource type="Texture2D" uid="uid://dbxdjdllgwwec" path="res://Assets/Sprites/Map/village entrence 1.png" id="2_4rryh"]
+[ext_resource type="Texture2D" uid="uid://csna5be3p30pn" path="res://Assets/Sprites/Characters/YamexUp1.png" id="3_4rryh"]
+[ext_resource type="Texture2D" uid="uid://bnvjfb37dl4se" path="res://Assets/Sprites/Characters/YamexUp2.png" id="4_cn5am"]
+[ext_resource type="Texture2D" uid="uid://bonwelmkgnrg1" path="res://Assets/Sprites/Characters/YamexUp3.png" id="5_lklhs"]
+[ext_resource type="Texture2D" uid="uid://b0nnolkbc3a2e" path="res://Assets/Sprites/Characters/YamexUp4.png" id="6_034tb"]
+[ext_resource type="Texture2D" uid="uid://cc6y3vgna1uhi" path="res://Assets/Sprites/Characters/omyx run yamex up1.png" id="7_13jkw"]
+[ext_resource type="Texture2D" uid="uid://b4o1804smqt5f" path="res://Assets/Sprites/Characters/omyx run yamex up2.png" id="8_ulkcp"]
+[ext_resource type="Texture2D" uid="uid://c7sv5rw04h3u0" path="res://Assets/Sprites/Characters/omyx run yamex up3.png" id="9_3mhs6"]
+[ext_resource type="Texture2D" uid="uid://bth1kalkvh5rk" path="res://Assets/Sprites/Characters/omyx run yamex up4.png" id="10_e4vuc"]
+[ext_resource type="Texture2D" uid="uid://gipm6kylxntt" path="res://Assets/Sprites/Characters/omyx run yamex down1.png" id="11_v7aug"]
+[ext_resource type="Texture2D" uid="uid://d6r4a0davklc" path="res://Assets/Sprites/Characters/omyx run yamex down2.png" id="12_rs8hi"]
+[ext_resource type="Texture2D" uid="uid://cb3ylyl1i7bxr" path="res://Assets/Sprites/Characters/omyx run yamex down3.png" id="13_7cafk"]
+[ext_resource type="Texture2D" uid="uid://mvikbnclniek" path="res://Assets/Sprites/Characters/omyx run yamex down4.png" id="14_dwx7u"]
+[ext_resource type="Texture2D" uid="uid://bwrpxrvcqgrq7" path="res://Assets/Sprites/Map/Label.png" id="15_vsl0w"]
+[ext_resource type="Texture2D" uid="uid://caa1x0tkc0fjp" path="res://Assets/Sprites/Map/village entrence 2.png" id="16_cn5am"]
+[ext_resource type="FontFile" uid="uid://dejtpbba8kecb" path="res://Assets/font/bisty-font.ttf" id="16_lklhs"]
+[ext_resource type="AudioStream" uid="uid://bjvweauo26ilu" path="res://Assets/Music/farm ost part 2.mp3" id="18_lklhs"]
+[ext_resource type="FontFile" uid="uid://bsfe5osx4p2iq" path="res://Assets/font/undertale-deltarune-text-font-extended.otf" id="19_034tb"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ia4pr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_4rryh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_cn5am")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_lklhs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_034tb")
+}],
+"loop": true,
+"name": &"down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_13jkw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ulkcp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_3mhs6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_e4vuc")
+}],
+"loop": true,
+"name": &"left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_v7aug")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_rs8hi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_7cafk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_dwx7u")
+}],
+"loop": true,
+"name": &"up",
+"speed": 5.0
+}]
+
+[node name="farm2" type="Node2D"]
+texture_filter = 1
+
+[node name="running" type="Node2D" parent="."]
+script = ExtResource("1_flt5r")
+
+[node name="VillageEntrence" type="Sprite2D" parent="running"]
+texture = ExtResource("2_4rryh")
+centered = false
+
+[node name="Runing" type="AnimatedSprite2D" parent="running"]
+position = Vector2(88.3021, -38.2028)
+scale = Vector2(0.765, 0.765)
+sprite_frames = SubResource("SpriteFrames_ia4pr")
+animation = &"left"
+
+[node name="Camera2D" type="Camera2D" parent="running/Runing"]
+zoom = Vector2(5.35, 5.35)
+process_callback = 0
+limit_left = 0
+limit_top = 0
+limit_right = 200
+limit_bottom = 299
+editor_draw_limits = true
+editor_draw_drag_margin = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="running"]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="running/CanvasLayer"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 6.0
+offset_top = 415.0
+offset_right = 798.0
+offset_bottom = 603.0
+theme_override_constants/outline_size = 6
+theme_override_constants/line_separation = -6
+theme_override_fonts/normal_font = ExtResource("19_034tb")
+theme_override_font_sizes/normal_font_size = 36
+text = "Character design and art : 
+-Omar Kabbani
+"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+
+[node name="Label" type="Sprite2D" parent="running"]
+position = Vector2(90.0724, 35.6674)
+texture = ExtResource("15_vsl0w")
+
+[node name="Label" type="Label" parent="running/Label"]
+layout_direction = 2
+offset_left = -41.0
+offset_top = -30.0
+offset_right = 63.0
+offset_bottom = -8.0
+scale = Vector2(0.8, 0.8)
+theme_override_colors/font_color = Color(0.243846, 0.131428, 0.0120357, 1)
+theme_override_fonts/font = ExtResource("16_lklhs")
+theme_override_font_sizes/font_size = 8
+text = ":AZWAD:"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+text_overrun_behavior = 1
+
+[node name="VillageEntrence2" type="Sprite2D" parent="running"]
+position = Vector2(100.037, 149.611)
+texture = ExtResource("16_cn5am")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="running"]
+stream = ExtResource("18_lklhs")
+volume_db = -10.0

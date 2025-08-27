@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://covi4mt77skgr"
+path="res://.godot/imported/castle theme.mp3-d0aaf3a8632052e88bff9befb38c388a.mp3str"
+
+[deps]
+
+source_file="res://Assets/Music/castle theme.mp3"
+dest_files=["res://.godot/imported/castle theme.mp3-d0aaf3a8632052e88bff9befb38c388a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

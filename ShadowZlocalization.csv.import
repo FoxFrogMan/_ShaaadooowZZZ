@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://c3eyv2hrprjnb"
+
+[deps]
+
+files=["res://ShadowZlocalization.en.translation", "res://ShadowZlocalization.ar.translation"]
+
+source_file="res://ShadowZlocalization.csv"
+dest_files=["res://ShadowZlocalization.en.translation", "res://ShadowZlocalization.ar.translation"]
+
+[params]
+
+compress=true
+delimiter=0

@@ -1,0 +1,20 @@
+[
+	{
+		"desc":"17 year old boy, not from azwad village but has been living here with yamex for about 10 years.\nmany villagers call him a <hyperactive tomtato> because of his bright red hair and excited nature",
+		"img":"res://Assets/Sprites/Characters/borderO.png",
+		"name":"Omyx",
+		"unlocked":true
+	},
+	{
+		"desc":"16 year old boy, does not remember anything from before living in azwad village, presumably from an accident.\nmany villagers call him a <weeping angel> because of his quite nature... and the facts he just appears in the middle of convorsation.",
+		"img":"res://Assets/Sprites/Characters/border.png",
+		"name":"Yamex",
+		"unlocked":true
+	},
+	{
+		"desc":"he's the man who runs azwad village, everyone loves him.\nwhen he's not in important meetings he's cleaning up the streets, helping kids with studies or walking with the elderly.",
+		"img":"res://Assets/Sprites/Villagers/mayor info.png",
+		"name":"The mayor",
+		"unlocked":true
+	}
+]

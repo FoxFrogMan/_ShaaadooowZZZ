@@ -1,0 +1,62 @@
+[gd_scene load_steps=7 format=3 uid="uid://dxpb8siqjga5l"]
+
+[ext_resource type="Script" uid="uid://c5vpop67q74kr" path="res://Assets/Scripts/playerController.gd" id="1_38rej"]
+[ext_resource type="SpriteFrames" uid="uid://bnstn07sbamk2" path="res://Assets/tress/AnimatedSprite/Characters/yamex.tres" id="2_38rej"]
+[ext_resource type="AudioStream" uid="uid://bkgr0s48vyct2" path="res://Assets/Sound/walking.mp3" id="3_23lac"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_w3t24"]
+radius = 5.0
+height = 16.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c3tg1"]
+size = Vector2(8, 8)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_38rej"]
+radius = 145.281
+
+[node name="player" type="CharacterBody2D"]
+collision_layer = 2
+motion_mode = 1
+script = ExtResource("1_38rej")
+character = 2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = ExtResource("2_38rej")
+animation = &"bird"
+frame = 2
+frame_progress = 1.0
+offset = Vector2(0, -22)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_w3t24")
+
+[node name="CameraTransform" type="RemoteTransform2D" parent="."]
+
+[node name="lookAnchor" type="Area2D" parent="."]
+rotation = 4.71239
+collision_layer = 128
+collision_mask = 0
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lookAnchor"]
+position = Vector2(20, 0)
+shape = SubResource("RectangleShape2D_c3tg1")
+disabled = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_23lac")
+volume_db = -10.0
+pitch_scale = 0.8
+parameters/looping = true
+
+[node name="birdwatcharea" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="birdwatcharea"]
+shape = SubResource("CircleShape2D_38rej")
+debug_color = Color(0.862745, 0.231373, 0.690196, 0.133333)
+
+[connection signal="body_entered" from="birdwatcharea" to="." method="_on_birdwatcharea_body_entered"]

@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://csafrak5wtb56"]
+
+[ext_resource type="Texture2D" uid="uid://b4h3sxoqdaa83" path="res://Assets/Sprites/Village stuff/tree.png" id="1_pj42u"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mgld6"]
+
+[node name="Tree" type="StaticBody2D"]
+
+[node name="treeSprite" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1, -72)
+texture = ExtResource("1_pj42u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_mgld6")

@@ -1,0 +1,414 @@
+[gd_scene load_steps=46 format=3 uid="uid://t1m1mftdsia"]
+
+[ext_resource type="Script" uid="uid://bu721rd12caik" path="res://Assets/Scripts/o_cutscene3.gd" id="1_ao2c3"]
+[ext_resource type="Texture2D" uid="uid://desy0lh7nuxtr" path="res://Assets/Sprites/Map/grass hill.png" id="2_ghog8"]
+[ext_resource type="Texture2D" uid="uid://umxow3nbxgow" path="res://Assets/Sprites/Characters/Yamex.png" id="3_qguon"]
+[ext_resource type="Texture2D" uid="uid://csna5be3p30pn" path="res://Assets/Sprites/Characters/YamexUp1.png" id="4_67qgs"]
+[ext_resource type="PackedScene" uid="uid://03mgpexvipmk" path="res://Assets/Scenes/omyx.tscn" id="5_4xshv"]
+[ext_resource type="FontFile" uid="uid://d0fqsv4pr5nol" path="res://Assets/font/Pixellari.ttf" id="5_7scda"]
+[ext_resource type="Texture2D" uid="uid://bnvjfb37dl4se" path="res://Assets/Sprites/Characters/YamexUp2.png" id="5_a3fva"]
+[ext_resource type="FontFile" uid="uid://b7sy7x0nnuw3m" path="res://Assets/font/PressStart2P-Regular.ttf" id="6_2y24d"]
+[ext_resource type="Texture2D" uid="uid://bonwelmkgnrg1" path="res://Assets/Sprites/Characters/YamexUp3.png" id="6_x25th"]
+[ext_resource type="Texture2D" uid="uid://b0nnolkbc3a2e" path="res://Assets/Sprites/Characters/YamexUp4.png" id="7_fh6e7"]
+[ext_resource type="FontFile" uid="uid://dvxn74w7mqmg5" path="res://Assets/font/FlourishTop.png" id="7_w4cq0"]
+[ext_resource type="Texture2D" uid="uid://nje4ot77jjqo" path="res://Assets/Sprites/Characters/yamex setting.png" id="8_xc8t6"]
+[ext_resource type="FontFile" uid="uid://ovwf2wt7b48a" path="res://Assets/font/Flourish.png" id="8_ytkf4"]
+[ext_resource type="Texture2D" uid="uid://doq6ih5n2v8ef" path="res://Assets/Sprites/Sunrise/Village.png" id="9_2y24d"]
+[ext_resource type="Texture2D" uid="uid://bx34uvoclmbpt" path="res://Assets/Sprites/Sunrise/Sky.png" id="9_6jw3s"]
+[ext_resource type="Texture2D" uid="uid://b8do0hc7awhax" path="res://Assets/Sprites/Sunrise/Sky2.png" id="9_20pla"]
+[ext_resource type="Shader" uid="uid://pywbwqlgv4f1" path="res://Assets/Shaders/farrm.gdshader" id="9_n6pe3"]
+[ext_resource type="Texture2D" uid="uid://ci36kw1cqijmk" path="res://Assets/Sprites/Sunrise/Right Mountain.png" id="10_0fbp3"]
+[ext_resource type="Texture2D" uid="uid://7gl6uf6v77qb" path="res://Assets/Sprites/Sunrise/Sun.png" id="10_20pla"]
+[ext_resource type="Texture2D" uid="uid://bluotq4a5dmwb" path="res://Assets/Sprites/Sunrise/Full_Backmountain.png" id="11_6jw3s"]
+[ext_resource type="Texture2D" uid="uid://cqfllusa4pheh" path="res://Assets/Sprites/Sunrise/Right Grass.png" id="11_lrpoa"]
+[ext_resource type="PackedScene" uid="uid://x7aefogr7p5h" path="res://Assets/Scenes/cameraV2.tscn" id="12_a3fva"]
+[ext_resource type="Texture2D" uid="uid://c0dxds1o4vosx" path="res://Assets/Sprites/Sunrise/Left Grass.png" id="12_linux"]
+[ext_resource type="Texture2D" uid="uid://cgbvmfbrj3rp1" path="res://Assets/Sprites/Sunrise/Left Mountain.png" id="14_sinr2"]
+[ext_resource type="AudioStream" uid="uid://xqu3x1m552ap" path="res://Assets/Music/farm ost (1).mp3" id="26_67qgs"]
+[ext_resource type="AudioStream" uid="uid://bjvweauo26ilu" path="res://Assets/Music/farm ost part 2.mp3" id="26_a3fva"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dlpny"]
+atlas = ExtResource("3_qguon")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_luqg8"]
+atlas = ExtResource("3_qguon")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8tell"]
+atlas = ExtResource("3_qguon")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p1qvk"]
+atlas = ExtResource("3_qguon")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1kepu"]
+atlas = ExtResource("3_qguon")
+region = Rect2(0, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xspd0"]
+atlas = ExtResource("3_qguon")
+region = Rect2(64, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6jhfj"]
+atlas = ExtResource("3_qguon")
+region = Rect2(128, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qcibg"]
+atlas = ExtResource("3_qguon")
+region = Rect2(192, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ahshl"]
+atlas = ExtResource("3_qguon")
+region = Rect2(64, 60, 64, 4)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wlt66"]
+atlas = ExtResource("3_qguon")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o0dh1"]
+atlas = ExtResource("3_qguon")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m5iti"]
+atlas = ExtResource("3_qguon")
+region = Rect2(128, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u3b7h"]
+atlas = ExtResource("3_qguon")
+region = Rect2(192, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bur1a"]
+atlas = ExtResource("3_qguon")
+region = Rect2(0, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d5eux"]
+atlas = ExtResource("3_qguon")
+region = Rect2(64, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p238c"]
+atlas = ExtResource("3_qguon")
+region = Rect2(128, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7v4y7"]
+atlas = ExtResource("3_qguon")
+region = Rect2(192, 192, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_c5ef7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dlpny")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_luqg8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8tell")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p1qvk")
+}],
+"loop": true,
+"name": &"down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_67qgs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_a3fva")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_x25th")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_fh6e7")
+}],
+"loop": true,
+"name": &"following",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1kepu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xspd0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6jhfj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qcibg")
+}],
+"loop": true,
+"name": &"left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ahshl")
+}],
+"loop": true,
+"name": &"nothing",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wlt66")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o0dh1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m5iti")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u3b7h")
+}],
+"loop": true,
+"name": &"right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_xc8t6")
+}],
+"loop": true,
+"name": &"sunrise",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bur1a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d5eux")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p238c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7v4y7")
+}],
+"loop": true,
+"name": &"up",
+"speed": 5.0
+}]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_n6pe3"]
+shader = ExtResource("9_n6pe3")
+shader_parameter/top_color = Color(1, 0.501961, 0.301961, 1)
+shader_parameter/bottom_color = Color(0.6, 0.701961, 1, 1)
+shader_parameter/horizon = 0.0
+
+[node name="TheHill" type="Node2D"]
+texture_filter = 1
+
+[node name="oCutscene" type="Node2D" parent="."]
+script = ExtResource("1_ao2c3")
+
+[node name="GrassHill2" type="Sprite2D" parent="oCutscene"]
+texture_filter = 1
+position = Vector2(100, 356)
+texture = ExtResource("2_ghog8")
+region_enabled = true
+region_rect = Rect2(0, 188, 200, 112)
+
+[node name="GrassHill3" type="Sprite2D" parent="oCutscene"]
+texture_filter = 1
+position = Vector2(100, 410)
+texture = ExtResource("2_ghog8")
+region_enabled = true
+region_rect = Rect2(0, 188, 200, 112)
+
+[node name="GrassHill" type="Sprite2D" parent="oCutscene"]
+z_index = 2
+texture_filter = 1
+position = Vector2(100, 150)
+texture = ExtResource("2_ghog8")
+
+[node name="Yamex" type="AnimatedSprite2D" parent="oCutscene"]
+z_index = 2
+position = Vector2(111, 72)
+scale = Vector2(0.765, 0.765)
+sprite_frames = SubResource("SpriteFrames_c5ef7")
+animation = &"sunrise"
+
+[node name="Camera" parent="oCutscene/Yamex" instance=ExtResource("12_a3fva")]
+position = Vector2(-145.098, 319.131)
+scale = Vector2(1.30719, 1.30719)
+zoom = Vector2(5.35, 5.35)
+limit_left = 0
+limit_top = -40
+limit_right = 200
+limit_bottom = 466
+editor_draw_limits = true
+
+[node name="Omyx" parent="oCutscene" instance=ExtResource("5_4xshv")]
+z_index = 2
+position = Vector2(86, 76)
+
+[node name="YamexUp4" type="Sprite2D" parent="oCutscene"]
+visible = false
+position = Vector2(113, 78)
+scale = Vector2(0.765, 0.765)
+texture = ExtResource("7_fh6e7")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="oCutscene"]
+
+[node name="Control" type="Control" parent="oCutscene/CanvasLayer"]
+layout_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -261.0
+offset_top = 31.0
+offset_right = -80.0
+offset_bottom = 85.0
+grow_horizontal = 2
+scale = Vector2(3, 3)
+
+[node name="Label1" type="Label" parent="oCutscene/CanvasLayer/Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 64.0
+offset_top = 17.0
+offset_right = 155.0
+offset_bottom = 40.0
+scale = Vector2(0.585, 0.585)
+theme_override_fonts/font = ExtResource("5_7scda")
+text = "9 years later"
+
+[node name="Label2" type="Label" parent="oCutscene/CanvasLayer/Control"]
+texture_filter = 1
+layout_mode = 0
+offset_top = 30.0
+offset_right = 512.0
+offset_bottom = 53.0
+scale = Vector2(0.39, 0.39)
+theme_override_fonts/font = ExtResource("6_2y24d")
+text = "-Year: 954 B.C. Eighth Month-  "
+
+[node name="Top" type="Label" parent="oCutscene/CanvasLayer/Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 18.0
+offset_top = 1.0
+offset_right = 157.0
+offset_bottom = 17.0
+theme_override_fonts/font = ExtResource("7_w4cq0")
+text = "*"
+
+[node name="Down" type="Label" parent="oCutscene/CanvasLayer/Control/Top"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 2.0
+offset_top = 36.0
+offset_right = 136.0
+offset_bottom = 52.0
+theme_override_fonts/font = ExtResource("8_ytkf4")
+text = "*"
+
+[node name="ColorRect" type="ColorRect" parent="oCutscene/CanvasLayer"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="oCutscene"]
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="oCutscene/ParallaxBackground"]
+texture_filter = 1
+motion_scale = Vector2(1, -0.2)
+motion_offset = Vector2(0, 40)
+
+[node name="Sky" type="Sprite2D" parent="oCutscene/ParallaxBackground/ParallaxLayer2"]
+modulate = Color(1, 0.690196, 0.454902, 1)
+material = SubResource("ShaderMaterial_n6pe3")
+position = Vector2(107, -3)
+scale = Vector2(1, 1.86923)
+texture = ExtResource("9_20pla")
+
+[node name="Sky2" type="Sprite2D" parent="oCutscene/ParallaxBackground/ParallaxLayer2"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(117, 28.5)
+scale = Vector2(1.12333, 1.56154)
+texture = ExtResource("9_6jw3s")
+
+[node name="Sun" type="Sprite2D" parent="oCutscene/ParallaxBackground/ParallaxLayer2"]
+position = Vector2(125, 70)
+texture = ExtResource("10_20pla")
+
+[node name="ParallaxLayer7" type="ParallaxLayer" parent="oCutscene/ParallaxBackground"]
+texture_filter = 1
+position = Vector2(0, 8)
+motion_scale = Vector2(1, 0.01)
+motion_offset = Vector2(0, 40)
+
+[node name="BackMountain" type="Sprite2D" parent="oCutscene/ParallaxBackground/ParallaxLayer7"]
+position = Vector2(49, -13)
+texture = ExtResource("11_6jw3s")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="oCutscene/ParallaxBackground"]
+texture_filter = 1
+motion_scale = Vector2(1, 0.1)
+motion_offset = Vector2(0, 40)
+
+[node name="Village" type="Sprite2D" parent="oCutscene/ParallaxBackground/ParallaxLayer"]
+position = Vector2(120, 23)
+scale = Vector2(0.76, 0.76)
+texture = ExtResource("9_2y24d")
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="oCutscene/ParallaxBackground"]
+texture_filter = 1
+motion_scale = Vector2(1, 0.25)
+motion_offset = Vector2(0, 40)
+
+[node name="RightMountain" type="Sprite2D" parent="oCutscene/ParallaxBackground/ParallaxLayer4"]
+position = Vector2(182, 40)
+texture = ExtResource("10_0fbp3")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="oCutscene/ParallaxBackground"]
+texture_filter = 1
+motion_scale = Vector2(1, 0.1)
+motion_offset = Vector2(0, 40)
+
+[node name="LeftMountain" type="Sprite2D" parent="oCutscene/ParallaxBackground/ParallaxLayer3"]
+position = Vector2(-30, 49)
+texture = ExtResource("14_sinr2")
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="oCutscene/ParallaxBackground"]
+texture_filter = 1
+motion_scale = Vector2(1, 0.1)
+motion_offset = Vector2(0, 40)
+
+[node name="RightGrass" type="Sprite2D" parent="oCutscene/ParallaxBackground/ParallaxLayer5"]
+position = Vector2(-33, 78.4375)
+scale = Vector2(0.725, 0.731731)
+texture = ExtResource("11_lrpoa")
+
+[node name="ParallaxLayer6" type="ParallaxLayer" parent="oCutscene/ParallaxBackground"]
+texture_filter = 1
+motion_scale = Vector2(1, 0.1)
+motion_offset = Vector2(0, 40)
+
+[node name="LeftGrass" type="Sprite2D" parent="oCutscene/ParallaxBackground/ParallaxLayer6"]
+position = Vector2(315, 30)
+texture = ExtResource("12_linux")
+
+[node name="farmOst1" type="AudioStreamPlayer" parent="oCutscene"]
+stream = ExtResource("26_67qgs")
+volume_db = -10.0
+autoplay = true
+
+[node name="farmOst2" type="AudioStreamPlayer" parent="oCutscene"]
+stream = ExtResource("26_a3fva")
+volume_db = -10.0

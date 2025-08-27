@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c7ic86e0cl766"
+path="res://.godot/imported/akino voice.mp3-a6dc97e7e51a250c060b8a21b71309e4.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sound/SndOriginal/akino voice.mp3"
+dest_files=["res://.godot/imported/akino voice.mp3-a6dc97e7e51a250c060b8a21b71309e4.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

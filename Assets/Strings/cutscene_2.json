@@ -1,0 +1,103 @@
+[
+	{
+		"name": "Yamex",
+		"text": "Omyx.. What is your dream in life.. like.. What do you want to be in the future?",
+		"image": "res://Assets/Sprites/DialogueTalking/yamexhand.png",
+		"sound" : "res://Assets/Sound/SndOriginal/yamex voice.mp3",
+		"image_side": "1",
+		"speed": 0.03,
+		"no_skip": false
+	},
+	{
+		"name": "Omyx",
+		"text": "I thought you already knew that",
+		"image": "res://Assets/Sprites/DialogueTalking/omyxthinks.png",
+		"sound" : "res://Assets/Sound/SndOriginal/omyx voice.mp3",
+		"image_side": "0",
+		"speed": 0.03,
+		"no_skip": false
+	},
+	{
+		"name": "Omyx",
+		"text": ". . . ",
+		"image": "res://Assets/Sprites/DialogueTalking/omyxthinks.png",
+		"sound" : "res://Assets/Sound/SndOriginal/omyx voice.mp3",
+		"image_side": "0",
+		"speed": 0.3,
+		"no_skip": false
+	},
+	{
+		"name": "Omyx",
+		"text": "actually , I always wanted to be .. the strongest .. ",
+		"image": "res://Assets/Sprites/DialogueTalking/omyxstars.png",
+		"sound" : "res://Assets/Sound/SndOriginal/omyx voice.mp3",
+		"image_side": "0",
+		"speed": 0.03,
+		"no_skip": false
+	},
+	{
+		"name": "Omyx",
+		"text": "the strongest warrior in the world...and I hope to be a [yellow: royal guard ] one day.",
+		"image": "res://Assets/Sprites/DialogueTalking/omyxstars.png",
+		"sound" : "res://Assets/Sound/SndOriginal/omyx voice.mp3",
+		"image_side": "0",
+		"speed": 0.03,
+		"no_skip": false
+	},     
+	{
+		"name": "Omyx",
+		"text": "That has been my dream since I was a kid",
+		"image": "res://Assets/Sprites/DialogueTalking/omyxsad.png",
+		"sound" : "res://Assets/Sound/SndOriginal/omyx voice.mp3",
+		"image_side": "0",
+		"speed": 0.03,
+		"no_skip": false
+	},       
+	{
+		"name": "Yamex",
+		"text": "( Yamex laughs lightly )",
+		"sound" : "res://Assets/Sound/SndOriginal/yamex voice.mp3",
+		"image": ["res://Assets/Sprites/DialogueTalking/yamexlaughs1.png", "res://Assets/Sprites/DialogueTalking/yamexlaughs2.png"],
+		"image_duration": 0.2,
+		"image_side": "1",
+		"speed": 0.03,
+		"no_skip": false
+	},
+	{
+		"name": "Omyx",
+		"text": "why are YOU laughing?! You are the one who asked the question!",
+		"image": "res://Assets/Sprites/DialogueTalking/omyxangry.png",
+		"sound" : "res://Assets/Sound/SndOriginal/omyx voice.mp3",
+		"image_side": "0",
+		"speed": 0.03,
+		"no_skip": false
+	},
+	{
+		"name": "Yamex",
+		"text": "That's a really nice dream. . . but you dont even have a sword",
+		"image": "res://Assets/Sprites/DialogueTalking/yamexhappy.png",
+		"sound" : "res://Assets/Sound/SndOriginal/yamex voice.mp3",
+		"image_side": "1",
+		"speed": 0.03,
+		"no_skip": false
+	},
+	{
+		"name": "Omyx",
+		"text": "Then I'll find some way to get a sword!",
+		"image": "res://Assets/Sprites/DialogueTalking/omyxangry.png",
+		"sound" : "res://Assets/Sound/SndOriginal/omyx voice.mp3",
+		"image_side": "0",
+		"speed": 0.03,
+		"no_skip": false
+	},
+	{
+		"name": "Yamex",
+		"text": "Okay, okay, I'm sorry, calm down",
+		"image": "res://Assets/Sprites/DialogueTalking/yamexnormal.png",
+		"sound" : "res://Assets/Sound/SndOriginal/yamex voice.mp3",
+		"image_side": "1",
+		"speed": 0.03,
+		"no_skip": false
+	},
+	
+]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://chaiqimwdouk3"
+path="res://.godot/imported/ppl talking.mp3-b24b01f26862141c3ee3bab3ff1e142d.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sound/ppl talking.mp3"
+dest_files=["res://.godot/imported/ppl talking.mp3-b24b01f26862141c3ee3bab3ff1e142d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

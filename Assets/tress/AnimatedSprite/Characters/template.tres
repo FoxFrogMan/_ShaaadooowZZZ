@@ -1,0 +1,44 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://dqwr7fb47vn2q"]
+
+[resource]
+animations = [{
+"frames": [],
+"loop": false,
+"name": &"IdleDown",
+"speed": 1.0
+}, {
+"frames": [],
+"loop": false,
+"name": &"IdleLeft",
+"speed": 1.0
+}, {
+"frames": [],
+"loop": false,
+"name": &"IdleRight",
+"speed": 1.0
+}, {
+"frames": [],
+"loop": false,
+"name": &"IdleUp",
+"speed": 1.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"MoveDown",
+"speed": 4.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"MoveLeft",
+"speed": 4.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"MoveRight",
+"speed": 4.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"MoveUp",
+"speed": 4.0
+}]

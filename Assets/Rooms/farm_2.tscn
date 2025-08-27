@@ -1,0 +1,214 @@
+[gd_scene load_steps=27 format=3 uid="uid://j5kaosv0h2j"]
+
+[ext_resource type="Script" uid="uid://b0l3lbe77nae3" path="res://Assets/Scripts/running.gd" id="1_ejm4u"]
+[ext_resource type="Texture2D" uid="uid://bx34uvoclmbpt" path="res://Assets/Sprites/Sunrise/Sky.png" id="2_bdfg4"]
+[ext_resource type="Texture2D" uid="uid://csna5be3p30pn" path="res://Assets/Sprites/Characters/YamexUp1.png" id="3_bdfg4"]
+[ext_resource type="Texture2D" uid="uid://lhursryqt37i" path="res://Assets/Sprites/Map/farm hill road1.png" id="3_mdbxc"]
+[ext_resource type="Texture2D" uid="uid://bnvjfb37dl4se" path="res://Assets/Sprites/Characters/YamexUp2.png" id="4_mdbxc"]
+[ext_resource type="Texture2D" uid="uid://bonwelmkgnrg1" path="res://Assets/Sprites/Characters/YamexUp3.png" id="5_8vm00"]
+[ext_resource type="Texture2D" uid="uid://b0nnolkbc3a2e" path="res://Assets/Sprites/Characters/YamexUp4.png" id="6_orub8"]
+[ext_resource type="Texture2D" uid="uid://cc6y3vgna1uhi" path="res://Assets/Sprites/Characters/omyx run yamex up1.png" id="7_o5j12"]
+[ext_resource type="Texture2D" uid="uid://b4o1804smqt5f" path="res://Assets/Sprites/Characters/omyx run yamex up2.png" id="8_lpsxx"]
+[ext_resource type="Texture2D" uid="uid://c7sv5rw04h3u0" path="res://Assets/Sprites/Characters/omyx run yamex up3.png" id="9_p2thr"]
+[ext_resource type="Texture2D" uid="uid://bth1kalkvh5rk" path="res://Assets/Sprites/Characters/omyx run yamex up4.png" id="10_xwyp6"]
+[ext_resource type="Texture2D" uid="uid://gipm6kylxntt" path="res://Assets/Sprites/Characters/omyx run yamex down1.png" id="11_pkpk8"]
+[ext_resource type="Texture2D" uid="uid://d6r4a0davklc" path="res://Assets/Sprites/Characters/omyx run yamex down2.png" id="12_4epgu"]
+[ext_resource type="Texture2D" uid="uid://cb3ylyl1i7bxr" path="res://Assets/Sprites/Characters/omyx run yamex down3.png" id="13_e8xyk"]
+[ext_resource type="Texture2D" uid="uid://mvikbnclniek" path="res://Assets/Sprites/Characters/omyx run yamex down4.png" id="14_1mv3l"]
+[ext_resource type="Texture2D" uid="uid://kblthdo636qa" path="res://Assets/Sprites/Map/farm hill road2.png" id="16_8vm00"]
+[ext_resource type="AudioStream" uid="uid://bjvweauo26ilu" path="res://Assets/Music/farm ost part 2.mp3" id="17_mdbxc"]
+[ext_resource type="Texture2D" uid="uid://7gl6uf6v77qb" path="res://Assets/Sprites/Sunrise/Sun.png" id="19_4epgu"]
+[ext_resource type="FontFile" uid="uid://bsfe5osx4p2iq" path="res://Assets/font/undertale-deltarune-text-font-extended.otf" id="19_orub8"]
+[ext_resource type="Texture2D" uid="uid://bluotq4a5dmwb" path="res://Assets/Sprites/Sunrise/Full_Backmountain.png" id="20_e8xyk"]
+[ext_resource type="Texture2D" uid="uid://doq6ih5n2v8ef" path="res://Assets/Sprites/Sunrise/Village.png" id="21_1mv3l"]
+[ext_resource type="Texture2D" uid="uid://ci36kw1cqijmk" path="res://Assets/Sprites/Sunrise/Right Mountain.png" id="23_ay0ru"]
+[ext_resource type="Texture2D" uid="uid://cgbvmfbrj3rp1" path="res://Assets/Sprites/Sunrise/Left Mountain.png" id="23_ia4pr"]
+[ext_resource type="Texture2D" uid="uid://cqfllusa4pheh" path="res://Assets/Sprites/Sunrise/Right Grass.png" id="24_7sp72"]
+[ext_resource type="Texture2D" uid="uid://c0dxds1o4vosx" path="res://Assets/Sprites/Sunrise/Left Grass.png" id="25_m400t"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ia4pr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_bdfg4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_mdbxc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_8vm00")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_orub8")
+}],
+"loop": true,
+"name": &"down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_o5j12")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_lpsxx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_p2thr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_xwyp6")
+}],
+"loop": true,
+"name": &"left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_pkpk8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_4epgu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_e8xyk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_1mv3l")
+}],
+"loop": true,
+"name": &"up",
+"speed": 5.0
+}]
+
+[node name="farm2" type="Node2D"]
+texture_filter = 1
+
+[node name="running" type="Node2D" parent="."]
+script = ExtResource("1_ejm4u")
+
+[node name="Sky" type="Sprite2D" parent="running"]
+visible = false
+position = Vector2(175.011, 65.0728)
+scale = Vector2(0.583495, 1)
+texture = ExtResource("2_bdfg4")
+
+[node name="FarmHillRoad" type="Sprite2D" parent="running"]
+scale = Vector2(1.00189, 1)
+texture = ExtResource("3_mdbxc")
+centered = false
+
+[node name="Runing" type="AnimatedSprite2D" parent="running"]
+position = Vector2(268, -32)
+sprite_frames = SubResource("SpriteFrames_ia4pr")
+animation = &"down"
+
+[node name="Camera2D" type="Camera2D" parent="running/Runing"]
+zoom = Vector2(4, 4)
+process_callback = 0
+limit_left = 0
+limit_top = 0
+limit_right = 350
+limit_bottom = 200
+editor_draw_limits = true
+editor_draw_drag_margin = true
+
+[node name="FarmHillRoad2" type="Sprite2D" parent="running"]
+position = Vector2(166.964, 99.8531)
+texture = ExtResource("16_8vm00")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="running"]
+stream = ExtResource("17_mdbxc")
+volume_db = -10.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="running"]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="running/CanvasLayer"]
+modulate = Color(1, 1, 1, 0)
+clip_contents = false
+offset_left = 6.0
+offset_top = 351.0
+offset_right = 791.0
+offset_bottom = 593.0
+theme_override_constants/outline_size = 6
+theme_override_constants/line_separation = -6
+theme_override_fonts/normal_font = ExtResource("19_orub8")
+theme_override_font_sizes/normal_font_size = 36
+text = "a Story written by:
+omar kabbani & yamen estef"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+texture_filter = 1
+motion_scale = Vector2(1, -0.2)
+motion_offset = Vector2(0, 40)
+
+[node name="Sky2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(117, 28.5)
+scale = Vector2(1.12333, 1.56154)
+texture = ExtResource("2_bdfg4")
+
+[node name="Sun" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(123, -16)
+texture = ExtResource("19_4epgu")
+
+[node name="ParallaxLayer7" type="ParallaxLayer" parent="ParallaxBackground"]
+texture_filter = 1
+position = Vector2(0, 8)
+motion_scale = Vector2(1, 0.01)
+motion_offset = Vector2(0, 40)
+
+[node name="BackMountain" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer7"]
+position = Vector2(49, -13)
+texture = ExtResource("20_e8xyk")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+texture_filter = 1
+motion_scale = Vector2(1, 0.1)
+motion_offset = Vector2(0, 40)
+
+[node name="Village" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(120, 23)
+scale = Vector2(0.76, 0.76)
+texture = ExtResource("21_1mv3l")
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
+texture_filter = 1
+motion_scale = Vector2(1, 0.25)
+motion_offset = Vector2(0, 40)
+
+[node name="RightMountain" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+position = Vector2(182, 40)
+texture = ExtResource("23_ay0ru")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+texture_filter = 1
+motion_scale = Vector2(1, 0.1)
+motion_offset = Vector2(0, 40)
+
+[node name="LeftMountain" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+position = Vector2(-30, 49)
+texture = ExtResource("23_ia4pr")
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground"]
+texture_filter = 1
+motion_scale = Vector2(1, 0.1)
+motion_offset = Vector2(0, 40)
+
+[node name="RightGrass" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer5"]
+position = Vector2(-33, 78.4375)
+scale = Vector2(0.725, 0.731731)
+texture = ExtResource("24_7sp72")
+
+[node name="ParallaxLayer6" type="ParallaxLayer" parent="ParallaxBackground"]
+texture_filter = 1
+motion_scale = Vector2(1, 0.1)
+motion_offset = Vector2(0, 40)
+
+[node name="LeftGrass" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer6"]
+position = Vector2(315, 30)
+texture = ExtResource("25_m400t")

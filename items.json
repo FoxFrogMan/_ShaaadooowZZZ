@@ -1,0 +1,15 @@
+{
+	"peanut butter":{
+		"stats":["hp","def"],
+		"hp":10,
+		"def":5,
+		"desc":"a freshly-made jar of peanut butter!",
+		"img":"res://Assets/InventorySystem/itemIcons/peanut butter.png"
+	},
+	"niga cookie":{
+		"stats":["atk"],
+		"atk":10,
+		"desc":"a black chocolate cookie!",
+		"img":"res://Assets/InventorySystem/itemIcons/niga cookie.png"
+	}
+}

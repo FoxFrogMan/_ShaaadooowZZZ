@@ -1,0 +1,774 @@
+[gd_scene load_steps=18 format=3 uid="uid://cj1dkqpsk6fqw"]
+
+[ext_resource type="Texture2D" uid="uid://wkwua6q7jac7" path="res://Assets/InventorySystem/select character.png" id="1_0pc0d"]
+[ext_resource type="Script" uid="uid://blt3jpugu8c83" path="res://Assets/InventorySystem/info_ui.gd" id="1_asx80"]
+[ext_resource type="Texture2D" uid="uid://bf6koduhysxlm" path="res://Assets/InventorySystem/characters info.png" id="4_0o8l5"]
+[ext_resource type="FontFile" uid="uid://c4dhs31f57jj6" path="res://Assets/font/Mars Needs Cunnilingus.ttf" id="4_mup1m"]
+[ext_resource type="Texture2D" uid="uid://bytwii56g0cmk" path="res://Assets/InventorySystem/inv.png" id="5_icce4"]
+[ext_resource type="FontFile" uid="uid://bsfe5osx4p2iq" path="res://Assets/font/undertale-deltarune-text-font-extended.otf" id="6_mup1m"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_waqw2"]
+texture = ExtResource("1_0pc0d")
+
+[sub_resource type="Animation" id="Animation_qorsg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HUD:custom_minimum_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(800, 99)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HUD:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 800)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HUD:size")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1067, 130)]
+}
+
+[sub_resource type="Animation" id="Animation_efxv8"]
+resource_name = "selectIntro"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HUD:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 800), Vector2(0, 670)]
+}
+
+[sub_resource type="Animation" id="Animation_xt1tu"]
+resource_name = "selectOutro"
+length = 0.2
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HUD:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 700), Vector2(0, 800)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5li4c"]
+_data = {
+&"RESET": SubResource("Animation_qorsg"),
+&"selectIntro": SubResource("Animation_efxv8"),
+&"selectOutro": SubResource("Animation_xt1tu")
+}
+
+[sub_resource type="Animation" id="Animation_2gytd"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CharactersInfo:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 5)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("INFO:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CharactersInfo:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("inventory:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("inventory:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1e-05, 4.385)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("inventory/Polygon2D:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("inventory/Polygon2D:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("INV:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_nvolf"]
+resource_name = "infoIntro"
+length = 0.4
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CharactersInfo:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1e-05, 5), Vector2(5, 5)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("INFO:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CharactersInfo:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_x4kam"]
+resource_name = "infoOutro"
+length = 0.2
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CharactersInfo:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(5, 5), Vector2(0, 5)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("INFO:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CharactersInfo:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_uxil0"]
+resource_name = "invIntro"
+length = 0.4
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("inventory:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("inventory:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1e-05, 4.385), Vector2(4.385, 4.385)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("inventory/Polygon2D:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 1), Vector2(1.1, 1.02)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("inventory/Polygon2D:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("INV:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_mm4dx"]
+resource_name = "invOutro"
+length = 0.2
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("inventory:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("inventory:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(4.385, 4.385), Vector2(1e-05, 4.385)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("INV:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_trppg"]
+_data = {
+&"RESET": SubResource("Animation_2gytd"),
+&"infoIntro": SubResource("Animation_nvolf"),
+&"infoOutro": SubResource("Animation_x4kam"),
+&"invIntro": SubResource("Animation_uxil0"),
+&"invOutro": SubResource("Animation_mm4dx")
+}
+
+[node name="INFO UI" type="CanvasLayer"]
+script = ExtResource("1_asx80")
+
+[node name="HUD" type="Panel" parent="."]
+auto_translate_mode = 2
+texture_filter = 1
+custom_minimum_size = Vector2(800, 99)
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1.0
+offset_bottom = 130.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 8
+theme_override_styles/panel = SubResource("StyleBoxTexture_waqw2")
+
+[node name="grid" type="GridContainer" parent="HUD"]
+layout_direction = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 8
+columns = 5
+
+[node name="ColorRect" type="ColorRect" parent="HUD"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0)
+
+[node name="HUDanim" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_5li4c")
+}
+autoplay = "RESET"
+
+[node name="InputCooldown" type="Timer" parent="."]
+wait_time = 0.25
+
+[node name="INFO" type="CenterContainer" parent="."]
+visible = false
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.778
+offset_bottom = 46.6
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="C" type="TextureRect" parent="INFO"]
+texture_filter = 1
+custom_minimum_size = Vector2(640, 390)
+layout_mode = 2
+texture = ExtResource("4_0o8l5")
+
+[node name="RatioDivider" type="HSplitContainer" parent="INFO/C"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.046875
+anchor_top = 0.0769231
+anchor_right = 0.953125
+anchor_bottom = 0.923077
+grow_horizontal = 2
+grow_vertical = 2
+dragging_enabled = false
+dragger_visibility = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="INFO/C/RatioDivider"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="infoCont" type="VBoxContainer" parent="INFO/C/RatioDivider/MarginContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="info" type="HBoxContainer" parent="INFO/C/RatioDivider/MarginContainer/infoCont"]
+layout_mode = 2
+alignment = 1
+
+[node name="name" type="Label" parent="INFO/C/RatioDivider/MarginContainer/infoCont/info"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("4_mup1m")
+theme_override_font_sizes/font_size = 24
+
+[node name="lv" type="Label" parent="INFO/C/RatioDivider/MarginContainer/infoCont/info"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_mup1m")
+theme_override_font_sizes/font_size = 24
+
+[node name="desc" type="Label" parent="INFO/C/RatioDivider/MarginContainer/infoCont"]
+custom_minimum_size = Vector2(0, 41)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_mup1m")
+theme_override_font_sizes/font_size = 18
+autowrap_mode = 3
+
+[node name="HSeparator2" type="HSeparator" parent="INFO/C/RatioDivider/MarginContainer/infoCont"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="ability" type="HBoxContainer" parent="INFO/C/RatioDivider/MarginContainer/infoCont"]
+layout_mode = 2
+
+[node name="Label" type="RichTextLabel" parent="INFO/C/RatioDivider/MarginContainer/infoCont/ability"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/normal_font = ExtResource("4_mup1m")
+theme_override_font_sizes/normal_font_size = 22
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+
+[node name="HSeparator4" type="HSeparator" parent="INFO/C/RatioDivider/MarginContainer/infoCont"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="stats" type="HBoxContainer" parent="INFO/C/RatioDivider/MarginContainer/infoCont"]
+layout_mode = 2
+
+[node name="XHP" type="Label" parent="INFO/C/RatioDivider/MarginContainer/infoCont/stats"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("4_mup1m")
+theme_override_font_sizes/font_size = 22
+
+[node name="ATK" type="Label" parent="INFO/C/RatioDivider/MarginContainer/infoCont/stats"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("4_mup1m")
+theme_override_font_sizes/font_size = 22
+horizontal_alignment = 1
+
+[node name="DEF" type="Label" parent="INFO/C/RatioDivider/MarginContainer/infoCont/stats"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("4_mup1m")
+theme_override_font_sizes/font_size = 22
+horizontal_alignment = 2
+
+[node name="HSeparator3" type="HSeparator" parent="INFO/C/RatioDivider/MarginContainer/infoCont"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="label3" type="HBoxContainer" parent="INFO/C/RatioDivider/MarginContainer/infoCont"]
+layout_mode = 2
+
+[node name="label" type="Label" parent="INFO/C/RatioDivider/MarginContainer/infoCont/label3"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_mup1m")
+theme_override_font_sizes/font_size = 22
+text = "SKILLS"
+
+[node name="label2" type="Label" parent="INFO/C/RatioDivider/MarginContainer/infoCont/label3"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_mup1m")
+theme_override_font_sizes/font_size = 24
+text = ":"
+
+[node name="skills" type="GridContainer" parent="INFO/C/RatioDivider/MarginContainer/infoCont"]
+layout_mode = 2
+theme_override_constants/v_separation = 5
+columns = 2
+
+[node name="label" type="Label" parent="INFO/C/RatioDivider/MarginContainer/infoCont/skills"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("4_mup1m")
+theme_override_font_sizes/font_size = 16
+horizontal_alignment = 1
+
+[node name="label2" type="Label" parent="INFO/C/RatioDivider/MarginContainer/infoCont/skills"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("4_mup1m")
+theme_override_font_sizes/font_size = 16
+horizontal_alignment = 1
+
+[node name="label3" type="Label" parent="INFO/C/RatioDivider/MarginContainer/infoCont/skills"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("4_mup1m")
+theme_override_font_sizes/font_size = 16
+horizontal_alignment = 1
+
+[node name="label4" type="Label" parent="INFO/C/RatioDivider/MarginContainer/infoCont/skills"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("4_mup1m")
+theme_override_font_sizes/font_size = 16
+horizontal_alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="INFO/C/RatioDivider"]
+custom_minimum_size = Vector2(170, 0)
+layout_mode = 2
+
+[node name="CharPreview" type="Control" parent="INFO/C/RatioDivider/CenterContainer"]
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="INFO/C/RatioDivider/CenterContainer/CharPreview"]
+scale = Vector2(4, 4)
+hframes = 4
+vframes = 4
+frame = 4
+
+[node name="INV" type="CenterContainer" parent="."]
+visible = false
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.778
+offset_bottom = 47.6
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="C" type="TextureRect" parent="INV"]
+texture_filter = 1
+custom_minimum_size = Vector2(750, 350)
+layout_mode = 2
+texture = ExtResource("5_icce4")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="RatioDivider" type="HSplitContainer" parent="INV/C"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.035
+anchor_top = 0.0742857
+anchor_right = 0.965333
+anchor_bottom = 0.903
+offset_left = -0.25
+offset_right = 0.000244141
+offset_bottom = -0.0499878
+grow_horizontal = 2
+grow_vertical = 2
+split_offset = 443
+dragging_enabled = false
+dragger_visibility = 2
+
+[node name="VSplitContainer" type="VSplitContainer" parent="INV/C/RatioDivider"]
+layout_mode = 2
+split_offset = 80
+dragging_enabled = false
+dragger_visibility = 2
+
+[node name="GridContainer" type="GridContainer" parent="INV/C/RatioDivider/VSplitContainer"]
+layout_mode = 2
+columns = 3
+
+[node name="Label" type="Label" parent="INV/C/RatioDivider/VSplitContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("4_mup1m")
+theme_override_font_sizes/font_size = 48
+text = "<"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="INV/C/RatioDivider/VSplitContainer/GridContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 15
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="INV/C/RatioDivider/VSplitContainer/GridContainer/HBoxContainer"]
+layout_mode = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="TextureRect2" type="TextureRect" parent="INV/C/RatioDivider/VSplitContainer/GridContainer/HBoxContainer"]
+layout_mode = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="TextureRect3" type="TextureRect" parent="INV/C/RatioDivider/VSplitContainer/GridContainer/HBoxContainer"]
+layout_mode = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Label2" type="Label" parent="INV/C/RatioDivider/VSplitContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("4_mup1m")
+theme_override_font_sizes/font_size = 48
+text = ">"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="INV/C/RatioDivider/VSplitContainer/GridContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="INV/C/RatioDivider/VSplitContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = -4
+
+[node name="MarginContainer" type="MarginContainer" parent="INV/C/RatioDivider"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="INV/C/RatioDivider/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = -2
+
+[node name="ICON" type="TextureRect" parent="INV/C/RatioDivider/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+size_flags_horizontal = 4
+expand_mode = 3
+stretch_mode = 4
+
+[node name="name" type="RichTextLabel" parent="INV/C/RatioDivider/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("6_mup1m")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+
+[node name="stat" type="RichTextLabel" parent="INV/C/RatioDivider/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("6_mup1m")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+
+[node name="desc" type="RichTextLabel" parent="INV/C/RatioDivider/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/line_separation = -8
+theme_override_fonts/normal_font = ExtResource("6_mup1m")
+theme_override_font_sizes/normal_font_size = 14
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+vertical_alignment = 3
+
+[node name="UIanim" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_trppg")
+}
+
+[node name="CharactersInfo" type="Sprite2D" parent="."]
+visible = false
+z_index = 1
+texture_filter = 1
+position = Vector2(533, 334)
+scale = Vector2(1e-05, 5)
+texture = ExtResource("4_0o8l5")
+
+[node name="inventory" type="Sprite2D" parent="."]
+visible = false
+z_index = -1
+texture_filter = 1
+position = Vector2(533, 334)
+scale = Vector2(1e-05, 4.385)
+texture = ExtResource("5_icce4")
+
+[node name="Polygon2D" type="Polygon2D" parent="inventory"]
+show_behind_parent = true
+polygon = PackedVector2Array(86, -39, 79.8424, -39, 79.8424, -35.1228, -78.8864, -35.1228, -78.8864, -39, -85.044, -39, -85.044, -32.8421, -81.167, -32.8421, -81.167, 34.8947, -83.2195, 34.8947, -83.2195, 37.1754, -81.167, 37.1754, -81.167, 39.2281, -78.8864, 39.2281, -78.8864, 35.1228, 80.0705, 35.1228, 80.0705, 39, 82.123, 39, 82.123, 36.9474, 84.1755, 36.9474, 84.1755, 34.8947, 82.123, 34.8947, 82.123, -33.0702, 86, -33.0702)
+
+[node name="sfx" type="AudioStreamPlayer" parent="."]
+volume_db = -5.0

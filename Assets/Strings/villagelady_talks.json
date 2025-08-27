@@ -1,0 +1,9 @@
+[
+	{
+		"name":"miss Nova",
+		"image":"",
+		"sound":"res://Assets/Sound/snd_txtrud_ch1.wav",
+		"text":"Hello boys, do you have some time to help me out with some quick chores?",
+		"no_skip":false,
+	},
+]

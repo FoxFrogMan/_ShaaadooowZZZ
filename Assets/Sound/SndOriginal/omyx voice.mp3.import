@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cn5752u2jrv64"
+path="res://.godot/imported/omyx voice.mp3-66e72013cf7fcdcb7e68b81254457323.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sound/SndOriginal/omyx voice.mp3"
+dest_files=["res://.godot/imported/omyx voice.mp3-66e72013cf7fcdcb7e68b81254457323.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,26 @@
+[
+	{
+		"name": "The King",
+		"text": "do we have a deal?",
+		"image": "res://Assets/Sprites/DialogueTalking/kinghand.png",
+		"sound": "res://Assets/Sound/snd_txtber_ch1.wav"
+	},
+	{
+		"name": "Kantro",
+		"text": "we do.",
+		"image": "res://Assets/Sprites/DialogueTalking/kantrohand.png",
+		"sound": "res://Assets/Sound/snd_txtber_ch1.wav"
+	},
+	{
+		"name": "",
+		"text": "* [green: Kantro ] shakes hands with [yellow: The King ] *",
+		"image": "",
+		"sound": "res://Assets/Sound/snd_txtber_ch1.wav"
+	},
+	{
+		"name": "The King",
+		"text": "congratulations, kantro, you're now a member of the [yellow: royal gaurd ] ",
+		"image": "res://Assets/Sprites/DialogueTalking/kinghappy.png",
+		"sound": "res://Assets/Sound/snd_txtber_ch1.wav"
+	},
+]

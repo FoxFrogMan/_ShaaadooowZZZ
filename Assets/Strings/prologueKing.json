@@ -1,0 +1,44 @@
+[
+	{
+		"name": "The King",
+		"text": "so... you've arrived! \nstrongest warrior in the world \nholder of the [red: ShadowZ ]",
+		"image": "res://Assets/Sprites/DialogueTalking/kingthink.png",
+		"sound": "res://Assets/Sound/snd_txtber_ch1.wav"
+	},
+	{
+		"name": "The King",
+		"text": "[green: Kantro The Tornado ] ...",
+		"image": "res://Assets/Sprites/DialogueTalking/kinghappy.png",
+		"sound": "res://Assets/Sound/snd_txtber_ch1.wav"
+	},
+	{
+		"name": "Kantro",
+		"text": "It's an honor to meet you,\n [yellow: your majesty]",
+		"image": "res://Assets/Sprites/DialogueTalking/kantrohappy.png",
+		"sound": "res://Assets/Sound/snd_txtber_ch1.wav"
+	},
+	{
+		"name": "The King",
+		"text": "Hmm? But I see you alone... looks like [lime: the other one ] turned down my offer",
+		"image": "res://Assets/Sprites/DialogueTalking/kingcurious.png",
+		"sound": "res://Assets/Sound/snd_txtber_ch1.wav"
+	},
+	{
+		"name": "Kantro",
+		"text": "That's correct, But lets get to the important matters",
+		"image": "res://Assets/Sprites/DialogueTalking/kantrocurious.png",
+		"sound": "res://Assets/Sound/snd_txtber_ch1.wav"
+	},
+	{
+		"name": "The King",
+		"text": "I take it you've accepted my offer?",
+		"image": "res://Assets/Sprites/DialogueTalking/kinghappy.png",
+		"sound": "res://Assets/Sound/snd_txtber_ch1.wav"
+	},
+	{
+		"name": "Kantro",
+		"text": "yes, but first! \nI have a few terms...",
+		"image": "res://Assets/Sprites/DialogueTalking/kantrohappy.png",
+		"sound": "res://Assets/Sound/snd_txtber_ch1.wav"
+	},
+]

@@ -1,0 +1,16 @@
+[
+	{
+		"name": "The mayor",
+		"text": "welcome welcome everyone!",
+		"image": "res://Assets/Sprites/DialogueTalking/the mayor normal.png",
+		"sound": "",
+		"image_side": "0"
+	},
+	{
+		"name": "The mayor",
+		"text": " I'm delighted to announce this year's sword fighting tournament!",
+		"image": "res://Assets/Sprites/DialogueTalking/the mayor normal.png",
+		"sound": "",
+		"image_side": "0"
+	}
+]

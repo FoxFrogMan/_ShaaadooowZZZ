@@ -1,0 +1,19 @@
+﻿key,en,ar
+NAME_KANTRO,Kantro,كنترو
+NAME_OMYX,Omyx,اومكس
+NAME_YAMEX,Yamex,يامكس
+NAME_DARK,Dark,دارك
+NAME_KING,King,الملك
+LV,LV,مستوى
+XHP,XHP,صحة
+ATK,ATK,هجوم
+DEF,DEF,دفاع
+SKILLS,SKILLS,المهارات
+DESC_KANTRO,The strongest warrior.,المحارب الأقوى.
+DESC_OMYX,hyperactive boy with a love for swords.,فتى حيوي يحب القتال بالسيف
+DESC_YAMEX,"calm, intelligent and zero social skills!","هادئ, ذكي و بلا أي مهارات تواصل!"
+DESC_DARK,,
+#Tornado's core#,Tornado's core,قلب الاعصار
+#Pressure#,Pressure,الضغط
+#Ember slash#,Ember slash,شق الشرار
+:AZWAD:,Azwad Village,قرية أزواد

@@ -1,0 +1,16 @@
+[
+	{
+		"name": "Yamex",
+		"text": "oh! it will be fun [yellow: watching ] all the fights this year, right Omyx?",
+		"image": "res://Assets/Sprites/DialogueTalking/yamexnormal.png",
+		"sound": "res://Assets/Sound/SndOriginal/yamex voice.mp3",
+		"image_side": "0"
+	},
+	{
+		"name": "Yamex",
+		"text": "...omyx?",
+		"image": "res://Assets/Sprites/DialogueTalking/yamexcurious.png",
+		"sound": "res://Assets/Sound/SndOriginal/yamex voice.mp3",
+		"image_side": "0"
+	}
+]

@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://bx0do8n8cl0qr"]
+
+[ext_resource type="Texture2D" uid="uid://c7dd5yetni0yt" path="res://Assets/Sprites/KantroPrologue/royal spear guard .png" id="1_ewo3s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d5eqj"]
+size = Vector2(36, 18)
+
+[node name="guard" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_ewo3s")
+offset = Vector2(2, -20)
+flip_h = true
+hframes = 4
+vframes = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_d5eqj")
